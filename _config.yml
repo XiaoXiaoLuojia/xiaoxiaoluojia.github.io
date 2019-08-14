@@ -1,8 +1,8 @@
 # Site settings 配置站点
-title: '张瑞祥的博客小屋'
-description: '很高兴能在这里见到你，我叫张瑞祥，昵称极速，90后，热爱技术，一个想当极客当不了极客的极客~'
-keyword: '张瑞祥, 张瑞祥的博客，徐柯欣'
-url: 'https://xkw168.github.io/' # your host
+title: '子虚乌有的博客小屋'
+description: '很高兴能在这里见到你，我叫张瑞祥，给自己起了个假笔名叫子虚乌有，90后，多愁善感，不会舞文弄墨确偏要写诗赋词的理工男~'
+keyword: '张瑞祥, 迁客骚人、酸诗骚词、子虚乌有'
+url: 'https://zhangruixiang-whu.github.io/' # your host
 
 # when build blog on server, if you don't need baseurl, you should leave this value blank.
 # 在服务器上建站时，如果你不需要子域名，请将这一格留空
@@ -25,7 +25,7 @@ footer:
 
 # Author 配置博主信息
 author: '张瑞祥'
-nickname: '极速/faster'
+nickname: '子虚乌有'
 bio: 'PhD of Wuhan University，热爱文学'
 avatar: '/assets/img/zrxself.jpg'
 

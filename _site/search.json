@@ -1,15 +1,21 @@
 [
   
     {
-      "title"    : "Test0",
-      "tags"     : "诗词画意",
-      "url"      : "/2019/10/11/test0.html"
+      "title"    : "Ubuntu配置opencv+opencv_contrib",
+      "tags"     : "Ubuntu",
+      "url"      : "/2019/10/13/Ubuntu%E9%85%8D%E7%BD%AEopencv+opencv_contrib.html"
     } ,
   
     {
-      "title"    : "Test",
-      "tags"     : "诗词画意",
-      "url"      : "/2019/10/10/test.html"
+      "title"    : "Ubuntu 安装记录",
+      "tags"     : "Ubuntu",
+      "url"      : "/2019/10/11/Ubuntu-%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95.html"
+    } ,
+  
+    {
+      "title"    : "Tmux使用",
+      "tags"     : "Ubuntu",
+      "url"      : "/2019/10/10/Tmux%E4%BD%BF%E7%94%A8.html"
     } ,
   
     {

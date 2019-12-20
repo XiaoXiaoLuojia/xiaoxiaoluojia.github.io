@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test0 - 子虚乌有的博客小屋</title>
+    <title>Tmux使用 - 子虚乌有的博客小屋</title>
     <meta name="author"  content="张瑞祥">
-    <meta name="description" content="Test0">
-    <meta name="keywords"  content="诗词画意">
+    <meta name="description" content="Tmux使用">
+    <meta name="keywords"  content="Ubuntu">
     <!-- Open Graph -->
-    <meta property="og:title" content="Test0 - 子虚乌有的博客小屋">
+    <meta property="og:title" content="Tmux使用 - 子虚乌有的博客小屋">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:4000/2019/10/11/test0.html">
+    <meta property="og:url" content="http://localhost:4000/2019/10/10/Tmux%E4%BD%BF%E7%94%A8.html">
     <meta property="og:description" content="很高兴能在这里见到你，我叫张瑞祥，给自己起了个假笔名叫子虚乌有，90后，多愁善感，不会舞文弄墨确偏要写诗赋词的理工男~">
     <meta property="og:site_name" content="子虚乌有的博客小屋">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -139,14 +139,14 @@ Author: Ray-Eldath
       <div class="post-tags">
         
           
-            <a href="/tags.html#%E8%AF%97%E8%AF%8D%E7%94%BB%E6%84%8F" class="post-tag">诗词画意</a>
+            <a href="/tags.html#Ubuntu" class="post-tag">Ubuntu</a>
           
         
       </div>
-      <h1>Test0</h1>
+      <h1>Tmux使用</h1>
       <div class="post-meta">
         <span class="post-meta-item"><i class="iconfont icon-author"></i>张瑞祥</span>
-        <time class="post-meta-item" datetime="19-10-11"><i class="iconfont icon-date"></i>11 Oct 2019</time>
+        <time class="post-meta-item" datetime="19-10-10"><i class="iconfont icon-date"></i>10 Oct 2019</time>
       </div>
     </div>
     
@@ -157,185 +157,159 @@ Author: Ray-Eldath
 
     <article class="markdown-body">
       <ul id="markdown-toc">
-  <li><a href="#显卡驱动" id="markdown-toc-显卡驱动">显卡驱动</a></li>
-  <li><a href="#cuda" id="markdown-toc-cuda">cuda</a></li>
-  <li><a href="#anaconda" id="markdown-toc-anaconda">anaconda</a></li>
-  <li><a href="#pytorch" id="markdown-toc-pytorch">pytorch</a></li>
-  <li><a href="#opencv--opencv_contrib" id="markdown-toc-opencv--opencv_contrib">opencv + opencv_contrib</a></li>
-  <li><a href="#ros" id="markdown-toc-ros">ROS</a></li>
-  <li><a href="#python安装opencvopencv_contrib" id="markdown-toc-python安装opencvopencv_contrib">Python安装opencv+opencv_contrib</a></li>
-</ul>
-
-<h2 id="显卡驱动">显卡驱动</h2>
-
-<ul>
-  <li>一篇比较全的博客：</li>
-</ul>
-
-<p>https://blog.csdn.net/xunan003/article/details/81665835</p>
-
-<p>（里面介绍了一些安装选项怎么选，照着来一般不会有问题）
-https://zhuanlan.zhihu.com/p/65557545</p>
-
-<ul>
-  <li>卸载和安装and一些坑的解决：</li>
-</ul>
-
-<p>https://blog.csdn.net/qq_31918961/article/details/80190397</p>
-
-<p>（看着比较全面，就记下来了，但是具体没有试验过）</p>
-
-<ul>
-  <li>一些常用的命令</li>
-</ul>
-
-<p>查看显卡型号</p>
-
-<p><code class="highlighter-rouge">$ lspci | grep -i nvidia</code></p>
-
-<p><code class="highlighter-rouge">$ sudo dpkg --list | grep nvidia-*</code></p>
-
-<p>查看驱动版本</p>
-
-<p><code class="highlighter-rouge">$ nvidia -smi</code></p>
-
-<h2 id="cuda">cuda</h2>
-
-<ul>
-  <li>这篇博客介绍了安装、安装选项、以及多版本共存的处理：</li>
-</ul>
-
-<p>https://www.jianshu.com/p/6a6fbce9073f</p>
-
-<p>（十分详细，尤其是多版本管理的方式，亲测有效）</p>
-
-<h2 id="anaconda">anaconda</h2>
-
-<p><strong>建议先参照下面的内容安装opencv+opencv_contrib，再安装anaconda，否则安装opencv的时候会报错</strong></p>
-
-<p>参考博客：https://blog.csdn.net/u012318074/article/details/77074665</p>
-
-<p>官方下载地址：https://www.continuum.io/downloads</p>
-
-<p>所有安装包地址：https://repo.continuum.io/archive/</p>
-
-<p>官网下载较慢，在所有安装包下载地址下载较快。</p>
-
-<p>下载好安装包，运行</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash Anaconda3-x.x.x-Linux-x86_64.sh
-</code></pre></div></div>
-
-<p>这里需要查看注册信息，回车浏览完信息即可,之后输入yes开始安装，再yes加入环境变量。</p>
-
-<p>安装完成之后，新开terminal，用如下命令查看</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anaconda -V
-conda -V
-</code></pre></div></div>
-
-<h2 id="pytorch">pytorch</h2>
-
-<p>pytorch 和 TensorFlow建议用conda创建虚拟环境以区分不同的版本，创建虚拟环境的时候可以指定python版本，之后利用conda安装pytorch，去官网查看安装命令[https://pytorch.org/get-started/locally/]。</p>
-
-<p>（官网中conda安装pytorch的命令会将pytorch和torchversion一起装上，这个过程需要网络比较好，安装过程很慢，pip安装较快，但是torchversion需要分开装，个人建议使用conda安装，注意各个版本和cuda的对应关系）</p>
-
-<p>安装旧的pytorch的时候，官网也可以找到安装命令，但是torchversion不一定会一起装上，暂时不知道需不需要对应上版本</p>
-
-<p>（———2019-11-22补充———————）</p>
-
-<p>针对conda安装pytorch速率慢的解决方法是换国内源，具体可以参考如下两条博客：</p>
-
-<p>https://blog.csdn.net/daydayjump/article/details/88562684
-https://www.jianshu.com/p/409f152f1f25</p>
-
-<p>首先，运行下面两条代码：</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-
-$ conda config --setshow_channel_urls yes
-
-</code></pre></div></div>
-<p>此时，会生成~/.condarc 文件。然后，gedit ~/.condarc 编辑该文件，将内容换成如下：</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>channels:
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
-  - defaults
-show_channel_urls: true
-</code></pre></div></div>
-<p>上文中前两个属于anaconda python的基础免费仓库镜像，最后一个属于pytorch的仓库镜像。注意想要下载pytorch要加上第三个镜像地址。</p>
-
-<p>最后，更新源地址：</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source ~/.condarc
-</code></pre></div></div>
-
-<h2 id="opencv--opencv_contrib">opencv + opencv_contrib</h2>
-
-<ul>
-  <li>安装依赖项</li>
-</ul>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install build-essential  
-  
-sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev  
-  
-sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev  
-
-sudo apt-get install build-essential qt5-default ccache libv4l-dev libavresample-dev  libgphoto2-dev libopenblas-base libopenblas-dev doxygen  openjdk-8-jdk pylint libvtk6-dev
-
-sudo apt-get install pkg-config
-</code></pre></div></div>
-
-<ul>
-  <li>官网下载源码</li>
-</ul>
-
-<p>opencv
-–https://github.com/opencv/opencv/releases</p>
-
-<p>opencv_contrib
-–https://github.com/opencv/opencv_contrib/releases</p>
-
-<p>下载需要的版本</p>
-
-<p>解压两个压缩包，然后将 opencv_contrib 放到 opencv X.X.X 里面，双击进入解压出来的opencv X.X.X文件夹，打开终端，创建build文件夹，cmake</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir build
-cd build 
-cmake ..
-</code></pre></div></div>
-
-<ul>
-  <li>cmake
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D CMAKE_BUILD_TYPE=Release -D OPENCV_EXTRA_MODULES_PATH=YOUR-PATH/opencv_contrib/modules -D OPENCV_ENABLE_NONFREE:BOOL=ON ..
-</code></pre></div>    </div>
-  </li>
-  <li>make
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make -j8
-sudo make install 
-</code></pre></div>    </div>
-    <p>两篇由于提前安装anaconda3，结果make报错的解决方法（但是试过好像没有解决问题）
-https://blog.csdn.net/ZT0518/article/details/83445308
-https://blog.csdn.net/Zafir_410/article/details/74357544</p>
+  <li><a href="#服务器的连接使用" id="markdown-toc-服务器的连接使用">服务器的连接使用</a>    <ul>
+      <li><a href="#ssh-连接" id="markdown-toc-ssh-连接">SSH 连接</a></li>
+      <li><a href="#tmux使用" id="markdown-toc-tmux使用">Tmux使用</a>        <ul>
+          <li><a href="#tmux-安装" id="markdown-toc-tmux-安装">tmux 安装</a></li>
+          <li><a href="#创建配置文件" id="markdown-toc-创建配置文件">创建配置文件</a></li>
+          <li><a href="#使用" id="markdown-toc-使用">使用</a></li>
+        </ul>
+      </li>
+      <li><a href="#tips" id="markdown-toc-tips">Tips</a>        <ul>
+          <li><a href="#进入服务器没有用户名只有一个符号直接输入" id="markdown-toc-进入服务器没有用户名只有一个符号直接输入">进入服务器没有用户名，只有一个$符号，直接输入</a></li>
+          <li><a href="#查看进程类似任务管理器" id="markdown-toc-查看进程类似任务管理器">查看进程（类似任务管理器）</a></li>
+          <li><a href="#查看显卡状态" id="markdown-toc-查看显卡状态">查看显卡状态</a></li>
+          <li><a href="#vim编辑" id="markdown-toc-vim编辑">Vim编辑</a></li>
+        </ul>
+      </li>
+    </ul>
   </li>
 </ul>
 
-<h2 id="ros">ROS</h2>
-<p>官网给出了详细的安装教程：</p>
+<h1 id="服务器的连接使用">服务器的连接使用</h1>
 
-<p>http://wiki.ros.org/ROS/Installation</p>
+<h2 id="ssh-连接">SSH 连接</h2>
 
-<p>这篇博客算是官网的翻译版，挺好的：</p>
+<h2 id="tmux使用">Tmux使用</h2>
 
-<p>https://www.cnblogs.com/liu-fa/p/5779206.html</p>
+<h3 id="tmux-安装">tmux 安装</h3>
 
-<h2 id="python安装opencvopencv_contrib">Python安装opencv+opencv_contrib</h2>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo python3 -m pip install opencv-python
-sudo python3 -m pip uninstall opencv-python
-sudo python3 -m pip install opencv-contrib-python
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt install tmux
 </code></pre></div></div>
-<p>附上pip3安装升级教程链接</p>
 
-<p>https://blog.csdn.net/tiweeny/article/details/78384633</p>
+<h3 id="创建配置文件">创建配置文件</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gedit ~/.tmux.conf
+</code></pre></div></div>
+<p>在tmux.conf中加入如下内容:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set -g mouse on
+
+set -g default-terminal "screen-256color"
+set -g display-time 3000
+set -g escape-time 0
+set -g history-limit 65535
+set -g base-index 1
+set -g pane-base-index 1
+
+setw -g monitor-activity on
+set -g visual-activity on
+
+set -g status-justify centre
+
+# Send prefix
+set-option -g prefix C-a
+unbind-key C-a
+bind-key C-a send-prefix
+
+# Use Alt-arrow keys to switch panes
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# Shift arrow to switch windows
+bind -n S-Left previous-window
+bind -n S-Right next-window
+
+
+# Set easier window split keys
+bind-key v split-window -h
+bind-key h split-window -v
+
+# Easy config reload
+bind-key r source-file ~/.tmux.conf \; display-message "tmux.conf reloaded"
+
+# keep path in new windows
+bind v split-window -h -c "#{pane_current_path}"
+bind h split-window -c "#{pane_current_path}"
+
+</code></pre></div></div>
+<h3 id="使用">使用</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 创建新的session
+$ tmux new -s session_NAME
+
+## 查看当前打开的session
+$ tmux ls
+
+## 进入已经创建的session
+$ tmux a -t exist_NAME 
+
+
+# 使用会话编号关闭session
+$ tmux kill-session -t 0
+
+# 使用会话名称关闭session
+$ tmux kill-session -t &lt;session-name&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>快捷键</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>先按 ctrl+按Ａ, 松开后再按
+h　　纵向创建窗口
+v　　横向创建窗口
+x,y  删除当前窗口
+c　　缓存bash，点击可切换
+</code></pre></div></div>
+
+<p>命令行操作</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 划分上下两个窗格
+$ tmux split-window
+
+# 划分左右两个窗格
+$ tmux split-window -h
+
+# 光标切换到上方窗格
+$ tmux select-pane -U
+
+# 光标切换到下方窗格
+$ tmux select-pane -D
+
+# 光标切换到左边窗格
+$ tmux select-pane -L
+
+# 光标切换到右边窗格
+$ tmux select-pane -R
+</code></pre></div></div>
+
+<h2 id="tips">Tips</h2>
+
+<h3 id="进入服务器没有用户名只有一个符号直接输入">进入服务器没有用户名，只有一个$符号，直接输入</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bash
+</code></pre></div></div>
+<p>然后回车就好</p>
+
+<h3 id="查看进程类似任务管理器">查看进程（类似任务管理器）</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ htop
+</code></pre></div></div>
+
+<h3 id="查看显卡状态">查看显卡状态</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ watch -n 1 -d nvidia-smi
+</code></pre></div></div>
+
+<h3 id="vim编辑">Vim编辑</h3>
+<p>连接服务器的时候gedit有时候打不开文件，可以用vim进行编辑，需要掌握vim编辑的简单技巧
+‘’’
+https://www.runoob.com/linux/linux-vim.html
+‘’’</p>
+
+<p>这是vim的教程</p>
+
+<p>常用的：</p>
+
+<p>vim打开文件是命令模式，按i, 进入插入模式（编辑模式），可以进行编辑，编辑完之后按esc回到命令模式，然后按‘：wq’，回车即可保存退出。</p>
 
 
     </article>
@@ -380,12 +354,21 @@ sudo python3 -m pip install opencv-contrib-python
     </section>
     <section class="post-footer-item read-next">
       
+      <div class="read-next-item">
+        <a href="/2019/10/11/Ubuntu-%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95.html" class="read-next-link"></a>
+        <section>
+          <span>Ubuntu 安装记录</span>
+          <p></p>
+        </section>
+        
+     </div>
+      
 
       
       <div class="read-next-item">
-        <a href="/2019/10/10/test.html" class="read-next-link"></a>
+        <a href="/2019/09/13/%E5%BF%86%E4%B8%AD%E7%A7%8B.html" class="read-next-link"></a>
           <section>
-            <span>Test</span>
+            <span>忆中秋</span>
             <p></p>
           </section>
           

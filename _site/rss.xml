@@ -5,12 +5,80 @@
     <description>很高兴能在这里见到你，我叫张瑞祥，给自己起了个假笔名叫子虚乌有，90后，多愁善感，不会舞文弄墨确偏要写诗赋词的理工男~</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 21 Dec 2019 00:08:35 +0800</pubDate>
-    <lastBuildDate>Sat, 21 Dec 2019 00:08:35 +0800</lastBuildDate>
+    <pubDate>Sat, 21 Dec 2019 00:22:44 +0800</pubDate>
+    <lastBuildDate>Sat, 21 Dec 2019 00:22:44 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
-        <title>Test0</title>
+        <title>Ubuntu配置opencv+opencv_contrib</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#opencv--opencv_contrib&quot; id=&quot;markdown-toc-opencv--opencv_contrib&quot;&gt;opencv + opencv_contrib&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;opencv--opencv_contrib&quot;&gt;opencv + opencv_contrib&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;安装依赖项&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install build-essential  
+  
+sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev  
+  
+sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev  
+
+sudo apt-get install build-essential qt5-default ccache libv4l-dev libavresample-dev  libgphoto2-dev libopenblas-base libopenblas-dev doxygen  openjdk-8-jdk pylint libvtk6-dev
+
+sudo apt-get install pkg-config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;官网下载源码&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;opencv
+–https://github.com/opencv/opencv/releases&lt;/p&gt;
+
+&lt;p&gt;opencv_contrib
+–https://github.com/opencv/opencv_contrib/releases&lt;/p&gt;
+
+&lt;p&gt;下载需要的版本&lt;/p&gt;
+
+&lt;p&gt;解压两个压缩包，然后将 opencv_contrib 放到 opencv X.X.X 里面，双击进入解压出来的opencv X.X.X文件夹，打开终端，创建build文件夹，cmake&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir build
+cd build 
+cmake ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cmake
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D CMAKE_BUILD_TYPE=Release -D OPENCV_EXTRA_MODULES_PATH=YOUR-PATH/opencv_contrib/modules -D OPENCV_ENABLE_NONFREE:BOOL=ON ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;make
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;make -j8
+sudo make install 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;两篇由于提前安装anaconda3，结果make报错的解决方法（但是试过好像没有解决问题）
+https://blog.csdn.net/ZT0518/article/details/83445308
+https://blog.csdn.net/Zafir_410/article/details/74357544&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 13 Oct 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/10/13/Ubuntu%E9%85%8D%E7%BD%AEopencv+opencv_contrib.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/10/13/Ubuntu%E9%85%8D%E7%BD%AEopencv+opencv_contrib.html</guid>
+        
+        <category>Ubuntu</category>
+        
+        
+        <category>安装记录</category>
+        
+      </item>
+    
+      <item>
+        <title>Ubuntu 安装记录</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#显卡驱动&quot; id=&quot;markdown-toc-显卡驱动&quot;&gt;显卡驱动&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#cuda&quot; id=&quot;markdown-toc-cuda&quot;&gt;cuda&lt;/a&gt;&lt;/li&gt;
@@ -194,18 +262,18 @@ sudo python3 -m pip install opencv-contrib-python
 
 </description>
         <pubDate>Fri, 11 Oct 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/10/11/test0.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/10/11/test0.html</guid>
+        <link>http://localhost:4000/2019/10/11/Ubuntu-%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/10/11/Ubuntu-%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95.html</guid>
         
-        <category>诗词画意</category>
+        <category>Ubuntu</category>
         
         
-        <category>其他</category>
+        <category>安装记录</category>
         
       </item>
     
       <item>
-        <title>Test</title>
+        <title>Tmux使用</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#服务器的连接使用&quot; id=&quot;markdown-toc-服务器的连接使用&quot;&gt;服务器的连接使用&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#ssh-连接&quot; id=&quot;markdown-toc-ssh-连接&quot;&gt;SSH 连接&lt;/a&gt;&lt;/li&gt;
@@ -363,13 +431,13 @@ https://www.runoob.com/linux/linux-vim.html
 
 </description>
         <pubDate>Thu, 10 Oct 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/10/10/test.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/10/10/test.html</guid>
+        <link>http://localhost:4000/2019/10/10/Tmux%E4%BD%BF%E7%94%A8.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/10/10/Tmux%E4%BD%BF%E7%94%A8.html</guid>
         
-        <category>诗词画意</category>
+        <category>Ubuntu</category>
         
         
-        <category>其他</category>
+        <category>奇技淫巧</category>
         
       </item>
     
@@ -889,160 +957,6 @@ https://www.runoob.com/linux/linux-vim.html
         <pubDate>Fri, 02 Aug 2019 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2019/08/02/%E9%9B%A8%E9%9C%96%E9%93%83-%E8%B5%A0%E5%88%AB%E5%8F%AF%E4%B8%BA.html</link>
         <guid isPermaLink="true">http://localhost:4000/2019/08/02/%E9%9B%A8%E9%9C%96%E9%93%83-%E8%B5%A0%E5%88%AB%E5%8F%AF%E4%B8%BA.html</guid>
-        
-        <category>诗词画意</category>
-        
-        
-        <category>其他</category>
-        
-      </item>
-    
-      <item>
-        <title>曾经（整合）</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#如梦令-途经大别山有感&quot; id=&quot;markdown-toc-如梦令-途经大别山有感&quot;&gt;如梦令 途经大别山有感&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#破阵子-大将功成&quot; id=&quot;markdown-toc-破阵子-大将功成&quot;&gt;破阵子 大将功成&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#如梦令-观湖游园记&quot; id=&quot;markdown-toc-如梦令-观湖游园记&quot;&gt;如梦令 观湖游园记&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#南乡子-空城奕&quot; id=&quot;markdown-toc-南乡子-空城奕&quot;&gt;南乡子 空城奕&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#卜算子-求仕难&quot; id=&quot;markdown-toc-卜算子-求仕难&quot;&gt;卜算子 求仕难&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#一个人&quot; id=&quot;markdown-toc-一个人&quot;&gt;一个人&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#愿友&quot; id=&quot;markdown-toc-愿友&quot;&gt;愿.友&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;  去年暑假，正值保研未知的忐忑之时，心中哀愁繁多，幸而又想起自己这一爱好，于是奋笔，写下了属于那年的篇章&lt;/p&gt;
-
-&lt;p&gt;（过去一年的时间了，有些“为赋新词强说愁的篇章”自己都不太能看懂了，就不做过多的解释了）&lt;/p&gt;
-
-&lt;h2 id=&quot;如梦令-途经大别山有感&quot;&gt;如梦令 途经大别山有感&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;                &lt;strong&gt;如梦令 途经大别山有感&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;                          
-现 张子虚&lt;/p&gt;
-
-&lt;p&gt;  小道入帘，曲路牵马，方圆蓝田庄稼。小驻荫下，看十里绿林，无上芳华。云卷晴空展，水滴墨色染，山水如画，道是大别人家。&lt;/p&gt;
-
-&lt;p&gt;  
-起兴提笔，欲书天涯，怎奈归心难话。车回梦发，踏一汪碧波，游水戏鸭。雨过淝水畔，月涌庐州岸，慈母念儿，也盼游子归家。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt;（此诗词写于18年8月1日回家的火车上，途经大别山区，看到立体的云层，就像墨水滴入清水中的感觉，就借此抒发归乡之意。）&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;破阵子-大将功成&quot;&gt;破阵子 大将功成&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;                &lt;strong&gt;破阵子 大将功成&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;                          
-现 张子虚&lt;/p&gt;
-
-&lt;p&gt;  牵黄擎苍，千骑过岗，点兵战意狂。赤玉的卢，挥刀断首，请长缨在手，何处问苍龙。&lt;/p&gt;
-
-&lt;p&gt;  
-折戟沉沙，卸甲还乡，埋名尘与土。晓风残月，醉酒还梦，送君一席风，愿为万古鹏。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;如梦令-观湖游园记&quot;&gt;如梦令 观湖游园记&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;              &lt;strong&gt;如梦令 观湖游园记&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;                          
-现 张子虚&lt;/p&gt;
-
-&lt;p&gt;  信约三两游假，浆持扁舟采花。偶遇鸳鸯叙话，争吓，春江暖水戏鸭。&lt;/p&gt;
-
-&lt;p&gt;  湖畔桥水人家，伏坐畅饮聊茶，轻雨潸潸而下，莫怕，庭前小坐赏花。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;南乡子-空城奕&quot;&gt;南乡子 空城奕&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;             &lt;strong&gt;南乡子 空城奕&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;                       
-现 张子虚&lt;/p&gt;
-
-&lt;p&gt;  戎马天下而出，未莫衣锦即入。信笔疾书，奈何，难言知己苦。&lt;/p&gt;
-
-&lt;p&gt;  酒过偏倚枯木，对弈无人空诉，落子无处，细数，却话当年路。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;卜算子-求仕难&quot;&gt;卜算子 求仕难&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;                 &lt;strong&gt;卜算子 求仕难&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;                           
-现 张子虚&lt;/p&gt;
-
-&lt;p&gt;  山河吞，紫气升，会顶山峦，博览万川红。年少不知浮华梦，天高鱼跃，振飞翅，望成龙。&lt;/p&gt;
-
-&lt;p&gt;  枯木生，落雨愁，伏案夜秋，惊现白发容。浪花滔滔转瞬空，月下扶风，话悲戚，心遗痛。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;一个人&quot;&gt;一个人&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;          &lt;strong&gt;一个人&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;                 
-张乌有&lt;/p&gt;
-
-&lt;p&gt;  一个人学，一个人背，一个人烦躁，一个人沉醉；&lt;/p&gt;
-
-&lt;p&gt;  一个人说，一个人做，一个人思索，一个人体味；&lt;/p&gt;
-
-&lt;p&gt;  一个人苦，一个人累，一个人伤心，一个人流泪；&lt;/p&gt;
-
-&lt;p&gt;  一个人走，一个人睡，一个人孤独，一个人后悔。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;愿友&quot;&gt;愿.友&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt; &lt;strong&gt;愿.友&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  张乌有&lt;/p&gt;
-
-&lt;p&gt;愿多年后，&lt;/p&gt;
-
-&lt;p&gt;你我认识旧友，&lt;/p&gt;
-
-&lt;p&gt;共饮老酒，一醉方休，&lt;/p&gt;
-
-&lt;p&gt;唱一首青春不朽。&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 31 Mar 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/03/31/%E6%9B%BE%E7%BB%8F.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/03/31/%E6%9B%BE%E7%BB%8F.html</guid>
         
         <category>诗词画意</category>
         

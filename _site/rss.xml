@@ -5,9 +5,204 @@
     <description>很高兴能在这里见到你，我叫张瑞祥，给自己起了个假笔名叫子虚乌有，90后，多愁善感，不会舞文弄墨确偏要写诗赋词的理工男~</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 21 Dec 2019 00:00:54 +0800</pubDate>
-    <lastBuildDate>Sat, 21 Dec 2019 00:00:54 +0800</lastBuildDate>
+    <pubDate>Sat, 21 Dec 2019 00:08:35 +0800</pubDate>
+    <lastBuildDate>Sat, 21 Dec 2019 00:08:35 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Test0</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#显卡驱动&quot; id=&quot;markdown-toc-显卡驱动&quot;&gt;显卡驱动&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#cuda&quot; id=&quot;markdown-toc-cuda&quot;&gt;cuda&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#anaconda&quot; id=&quot;markdown-toc-anaconda&quot;&gt;anaconda&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pytorch&quot; id=&quot;markdown-toc-pytorch&quot;&gt;pytorch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#opencv--opencv_contrib&quot; id=&quot;markdown-toc-opencv--opencv_contrib&quot;&gt;opencv + opencv_contrib&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ros&quot; id=&quot;markdown-toc-ros&quot;&gt;ROS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#python安装opencvopencv_contrib&quot; id=&quot;markdown-toc-python安装opencvopencv_contrib&quot;&gt;Python安装opencv+opencv_contrib&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;显卡驱动&quot;&gt;显卡驱动&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一篇比较全的博客：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;https://blog.csdn.net/xunan003/article/details/81665835&lt;/p&gt;
+
+&lt;p&gt;（里面介绍了一些安装选项怎么选，照着来一般不会有问题）
+https://zhuanlan.zhihu.com/p/65557545&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;卸载和安装and一些坑的解决：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;https://blog.csdn.net/qq_31918961/article/details/80190397&lt;/p&gt;
+
+&lt;p&gt;（看着比较全面，就记下来了，但是具体没有试验过）&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一些常用的命令&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;查看显卡型号&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ lspci | grep -i nvidia&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo dpkg --list | grep nvidia-*&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;查看驱动版本&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ nvidia -smi&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cuda&quot;&gt;cuda&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;这篇博客介绍了安装、安装选项、以及多版本共存的处理：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;https://www.jianshu.com/p/6a6fbce9073f&lt;/p&gt;
+
+&lt;p&gt;（十分详细，尤其是多版本管理的方式，亲测有效）&lt;/p&gt;
+
+&lt;h2 id=&quot;anaconda&quot;&gt;anaconda&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;建议先参照下面的内容安装opencv+opencv_contrib，再安装anaconda，否则安装opencv的时候会报错&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;参考博客：https://blog.csdn.net/u012318074/article/details/77074665&lt;/p&gt;
+
+&lt;p&gt;官方下载地址：https://www.continuum.io/downloads&lt;/p&gt;
+
+&lt;p&gt;所有安装包地址：https://repo.continuum.io/archive/&lt;/p&gt;
+
+&lt;p&gt;官网下载较慢，在所有安装包下载地址下载较快。&lt;/p&gt;
+
+&lt;p&gt;下载好安装包，运行&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bash Anaconda3-x.x.x-Linux-x86_64.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这里需要查看注册信息，回车浏览完信息即可,之后输入yes开始安装，再yes加入环境变量。&lt;/p&gt;
+
+&lt;p&gt;安装完成之后，新开terminal，用如下命令查看&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;anaconda -V
+conda -V
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;pytorch&quot;&gt;pytorch&lt;/h2&gt;
+
+&lt;p&gt;pytorch 和 TensorFlow建议用conda创建虚拟环境以区分不同的版本，创建虚拟环境的时候可以指定python版本，之后利用conda安装pytorch，去官网查看安装命令[https://pytorch.org/get-started/locally/]。&lt;/p&gt;
+
+&lt;p&gt;（官网中conda安装pytorch的命令会将pytorch和torchversion一起装上，这个过程需要网络比较好，安装过程很慢，pip安装较快，但是torchversion需要分开装，个人建议使用conda安装，注意各个版本和cuda的对应关系）&lt;/p&gt;
+
+&lt;p&gt;安装旧的pytorch的时候，官网也可以找到安装命令，但是torchversion不一定会一起装上，暂时不知道需不需要对应上版本&lt;/p&gt;
+
+&lt;p&gt;（———2019-11-22补充———————）&lt;/p&gt;
+
+&lt;p&gt;针对conda安装pytorch速率慢的解决方法是换国内源，具体可以参考如下两条博客：&lt;/p&gt;
+
+&lt;p&gt;https://blog.csdn.net/daydayjump/article/details/88562684
+https://www.jianshu.com/p/409f152f1f25&lt;/p&gt;
+
+&lt;p&gt;首先，运行下面两条代码：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+
+$ conda config --setshow_channel_urls yes
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;此时，会生成~/.condarc 文件。然后，gedit ~/.condarc 编辑该文件，将内容换成如下：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+  - defaults
+show_channel_urls: true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;上文中前两个属于anaconda python的基础免费仓库镜像，最后一个属于pytorch的仓库镜像。注意想要下载pytorch要加上第三个镜像地址。&lt;/p&gt;
+
+&lt;p&gt;最后，更新源地址：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ source ~/.condarc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;opencv--opencv_contrib&quot;&gt;opencv + opencv_contrib&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;安装依赖项&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install build-essential  
+  
+sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev  
+  
+sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev  
+
+sudo apt-get install build-essential qt5-default ccache libv4l-dev libavresample-dev  libgphoto2-dev libopenblas-base libopenblas-dev doxygen  openjdk-8-jdk pylint libvtk6-dev
+
+sudo apt-get install pkg-config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;官网下载源码&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;opencv
+–https://github.com/opencv/opencv/releases&lt;/p&gt;
+
+&lt;p&gt;opencv_contrib
+–https://github.com/opencv/opencv_contrib/releases&lt;/p&gt;
+
+&lt;p&gt;下载需要的版本&lt;/p&gt;
+
+&lt;p&gt;解压两个压缩包，然后将 opencv_contrib 放到 opencv X.X.X 里面，双击进入解压出来的opencv X.X.X文件夹，打开终端，创建build文件夹，cmake&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir build
+cd build 
+cmake ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cmake
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D CMAKE_BUILD_TYPE=Release -D OPENCV_EXTRA_MODULES_PATH=YOUR-PATH/opencv_contrib/modules -D OPENCV_ENABLE_NONFREE:BOOL=ON ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;make
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;make -j8
+sudo make install 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;两篇由于提前安装anaconda3，结果make报错的解决方法（但是试过好像没有解决问题）
+https://blog.csdn.net/ZT0518/article/details/83445308
+https://blog.csdn.net/Zafir_410/article/details/74357544&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ros&quot;&gt;ROS&lt;/h2&gt;
+&lt;p&gt;官网给出了详细的安装教程：&lt;/p&gt;
+
+&lt;p&gt;http://wiki.ros.org/ROS/Installation&lt;/p&gt;
+
+&lt;p&gt;这篇博客算是官网的翻译版，挺好的：&lt;/p&gt;
+
+&lt;p&gt;https://www.cnblogs.com/liu-fa/p/5779206.html&lt;/p&gt;
+
+&lt;h2 id=&quot;python安装opencvopencv_contrib&quot;&gt;Python安装opencv+opencv_contrib&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo python3 -m pip install opencv-python
+sudo python3 -m pip uninstall opencv-python
+sudo python3 -m pip install opencv-contrib-python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;附上pip3安装升级教程链接&lt;/p&gt;
+
+&lt;p&gt;https://blog.csdn.net/tiweeny/article/details/78384633&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 11 Oct 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/10/11/test0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/10/11/test0.html</guid>
+        
+        <category>诗词画意</category>
+        
+        
+        <category>其他</category>
+        
+      </item>
     
       <item>
         <title>Test</title>
@@ -848,272 +1043,6 @@ https://www.runoob.com/linux/linux-vim.html
         <pubDate>Sun, 31 Mar 2019 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2019/03/31/%E6%9B%BE%E7%BB%8F.html</link>
         <guid isPermaLink="true">http://localhost:4000/2019/03/31/%E6%9B%BE%E7%BB%8F.html</guid>
-        
-        <category>诗词画意</category>
-        
-        
-        <category>其他</category>
-        
-      </item>
-    
-      <item>
-        <title>曾经的曾经（高中那年.整合）</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#江城子-九曲回肠&quot; id=&quot;markdown-toc-江城子-九曲回肠&quot;&gt;江城子 九曲回肠&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#天净沙-乱尘&quot; id=&quot;markdown-toc-天净沙-乱尘&quot;&gt;天净沙 乱尘&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#如梦令-夜&quot; id=&quot;markdown-toc-如梦令-夜&quot;&gt;如梦令 夜&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#天净沙-功成&quot; id=&quot;markdown-toc-天净沙-功成&quot;&gt;天净沙 功成&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#破阵子-独上空楼&quot; id=&quot;markdown-toc-破阵子-独上空楼&quot;&gt;破阵子 独上空楼&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#秋&quot; id=&quot;markdown-toc-秋&quot;&gt;秋&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#仿-水调歌头&quot; id=&quot;markdown-toc-仿-水调歌头&quot;&gt;仿 水调歌头&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#天净沙-远望&quot; id=&quot;markdown-toc-天净沙-远望&quot;&gt;天净沙 远望&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#恒星&quot; id=&quot;markdown-toc-恒星&quot;&gt;恒星&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#寂寞花开&quot; id=&quot;markdown-toc-寂寞花开&quot;&gt;寂寞花开&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#故&quot; id=&quot;markdown-toc-故&quot;&gt;故&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#九月&quot; id=&quot;markdown-toc-九月&quot;&gt;九月&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#幻&quot; id=&quot;markdown-toc-幻&quot;&gt;幻&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#万古&quot; id=&quot;markdown-toc-万古&quot;&gt;万古&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#百年孤独曾笑一方&quot; id=&quot;markdown-toc-百年孤独曾笑一方&quot;&gt;百年孤独，曾笑一方&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;  这些是大学之前写下的东西，有的是一篇文章给的感悟，有的是仿写古诗古词，也有因着一句话写下的心中的秘密，如今读来，有东拼西凑的狼狈，有故作深沉的酸涩，也有一些，依旧能唤起回忆的佳话。&lt;/p&gt;
-
-&lt;h2 id=&quot;江城子-九曲回肠&quot;&gt;江城子 九曲回肠&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;                 &lt;strong&gt;江城子 九曲回肠&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  九曲断肠思悠悠，牵盼首，忆回眸。红颜花谢，化作空流瘦。峥嵘岁月犹暗稠，问心向，何处游。&lt;/p&gt;
-
-&lt;p&gt;  落雨空吟白发愁，挟拂柳，抱长钟。怨己长由，何能愧心久？辗转呦鸣号野兽，梦回天，泪欲流。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;天净沙-乱尘&quot;&gt;天净沙 乱尘&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;                &lt;strong&gt;天净沙  乱尘&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  天昏日暮寒鸦，屋内闲人话凉，又是一夜卧听沙。红楼梦回春，悄坐调细茶。&lt;/p&gt;
-
-&lt;p&gt;  乱尘客入酒家，惺惜薄命郎儿，谁命骑马赴京华。狂风舞芭蕉，潇潇雨落下。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;如梦令-夜&quot;&gt;如梦令 夜&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;                &lt;strong&gt;如梦令 夜&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  昙花现，烛曳光，一方烟火开暖肠。夜未央，影残殇，水底湘娥忆帝郎，悠悠难以当。&lt;/p&gt;
-
-&lt;p&gt;  碧荷长，星摇晃，九首白龙黯神伤。月荡漾，人彷徨，桥边红药叹夜长，漫漫何足望。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;天净沙-功成&quot;&gt;天净沙 功成&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;                &lt;strong&gt;天净沙 功成&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  昔日追秋马踏，仗剑横绝天涯。手握日月摘星辰，问乾坤大地，无我这般人。&lt;/p&gt;
-
-&lt;p&gt;  倚门相约杜康，暖酒入肠微冷。醉里闲来空挑灯，悲白发早生，哀剑鞘厚尘。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;破阵子-独上空楼&quot;&gt;破阵子 独上空楼&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;               &lt;strong&gt;破阵子 独上空楼&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  空山独影忆红楼，抚孤松，叹魂冢。夜宿古道庭屋，玉莹随，长恨难休，醉挑莫愁，只把万山游。&lt;/p&gt;
-
-&lt;p&gt;  竹叶门前清猿吼，揽回舍，哀瓢篓，闲谈话入沧州，楚天阔，落寞为友。雨后悲秋，却道寒鸦瘦。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;秋&quot;&gt;秋&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;    &lt;strong&gt;秋&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  清水方明破晓月，&lt;/p&gt;
-
-&lt;p&gt;  长空直挂弄云诀。&lt;/p&gt;
-
-&lt;p&gt;  采莲横秋三子游，&lt;/p&gt;
-
-&lt;p&gt;  笑月风花落人愁。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;仿-水调歌头&quot;&gt;仿 水调歌头&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;                 &lt;strong&gt;仿 水调歌头&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  忧泪何从来？断情自问心。此非吾意故乡，心安处何妨。我欲破蛹而飞，一跃化蝶千载，外世多喧嚣，恐不胜我意，依故还旧乡。&lt;/p&gt;
-
-&lt;p&gt;  斩乱丝，剑御飞，万缕绕。落寞花开，暗属风云乱自朝。胜败兵家常事，哀乐人之多情，所谓落逍遥。远观万山小，心广海阔辽。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;天净沙-远望&quot;&gt;天净沙 远望&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;                &lt;strong&gt;天净沙 远望&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  倚窗隔纱远望，碧天鸿雁北翔。雨霁初晴艳阳天，和风摇翠竹，春鸭戏暖江。&lt;/p&gt;
-
-&lt;p&gt;  门前孤帆远航，烛边提笔作草。正是春暖花开日，薄命锁重楼，人愁欲断肠。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;恒星&quot;&gt;恒星&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;    &lt;strong&gt;恒星&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  恒星坠陨只一瞬，&lt;/p&gt;
-
-&lt;p&gt;  咻咻十年难成仁。&lt;/p&gt;
-
-&lt;p&gt;  况君莫若为天妒，&lt;/p&gt;
-
-&lt;p&gt;  且放青楼安入尘。&lt;/p&gt;
-
-&lt;h2 id=&quot;寂寞花开&quot;&gt;寂寞花开&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;    &lt;strong&gt;寂寞花开&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  将进酒，浪里独挑，&lt;/p&gt;
-
-&lt;p&gt;  暗销魂，月黑风高，&lt;/p&gt;
-
-&lt;p&gt;  芳菲花尽又一朝，&lt;/p&gt;
-
-&lt;p&gt;  落雨白叶凋&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt;  叹世道，仰天长啸，&lt;/p&gt;
-
-&lt;p&gt;  哀路遥，暗讽自嘲，&lt;/p&gt;
-
-&lt;p&gt;  落寞声里往复叫，&lt;/p&gt;
-
-&lt;p&gt;  有绿花开了。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;故&quot;&gt;故&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;   &lt;strong&gt;故&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  红颜花开，&lt;/p&gt;
-
-&lt;p&gt;  青叶碧苔，&lt;/p&gt;
-
-&lt;p&gt;  微风自来，&lt;/p&gt;
-
-&lt;p&gt;  梦犹常在。&lt;/p&gt;
-
-&lt;p&gt;  漫步故宅，&lt;/p&gt;
-
-&lt;p&gt;  忆往愁外，&lt;/p&gt;
-
-&lt;p&gt;  檐下门窄，&lt;/p&gt;
-
-&lt;p&gt;  安能置人哉！&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;九月&quot;&gt;九月&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;     &lt;strong&gt;九月&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  九月的微风轻轻拂过，&lt;/p&gt;
-
-&lt;p&gt;  寒冬的冷月步履渐弱，&lt;/p&gt;
-
-&lt;p&gt;  深秋的羁绊断肠愁挫，&lt;/p&gt;
-
-&lt;p&gt;  化情的心声谁与诉说。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;幻&quot;&gt;幻&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;     &lt;strong&gt;幻&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  秋天的涩果长满枝头&lt;/p&gt;
-
-&lt;p&gt;  携凉的微风贯穿清袖&lt;/p&gt;
-
-&lt;p&gt;  我微笑着去牵你的双手&lt;/p&gt;
-
-&lt;p&gt;  灾难来临像一把匕首&lt;/p&gt;
-
-&lt;p&gt;  措手不及的你我分离已久&lt;/p&gt;
-
-&lt;p&gt;  一辈子的承诺化为了乌有&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;万古&quot;&gt;万古&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;   &lt;strong&gt;万古&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  万古还田&lt;/p&gt;
-
-&lt;p&gt;  只心不变&lt;/p&gt;
-
-&lt;p&gt;  知落千年&lt;/p&gt;
-
-&lt;p&gt;  梦回梵天&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h1 id=&quot;百年孤独曾笑一方&quot;&gt;百年孤独，曾笑一方&lt;/h1&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;  百年孤独，曾笑一方&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 01 Feb 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/02/01/%E6%9B%BE%E7%BB%8F%E7%9A%84%E6%9B%BE%E7%BB%8F.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/02/01/%E6%9B%BE%E7%BB%8F%E7%9A%84%E6%9B%BE%E7%BB%8F.html</guid>
         
         <category>诗词画意</category>
         

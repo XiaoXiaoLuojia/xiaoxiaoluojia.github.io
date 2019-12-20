@@ -5,8 +5,8 @@
     <description>很高兴能在这里见到你，我叫张瑞祥，给自己起了个假笔名叫子虚乌有，90后，多愁善感，不会舞文弄墨确偏要写诗赋词的理工男~</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 21 Dec 2019 00:43:43 +0800</pubDate>
-    <lastBuildDate>Sat, 21 Dec 2019 00:43:43 +0800</lastBuildDate>
+    <pubDate>Sat, 21 Dec 2019 01:03:02 +0800</pubDate>
+    <lastBuildDate>Sat, 21 Dec 2019 01:03:02 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -105,13 +105,13 @@ sudo make install
   &lt;li&gt;两篇比较全的博客&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;https://blog.csdn.net/lwplwf/article/details/61616493&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/lwplwf/article/details/61616493&quot;&gt;（OpenCV+Python）–环境配置，Windows+Python3.6（Anaconda3）+OpenCV3.2&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://blog.csdn.net/cairencong/article/details/82709317&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/cairencong/article/details/82709317&quot;&gt;Windows10下安装Python+OpenCV&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;首先，去python官网( https://www.python.org/downloads/windows/ )下载windows下的python安装包,选择
+    &lt;p&gt;首先，去&lt;a href=&quot;https://www.python.org/downloads/windows/&quot;&gt;python官网&lt;/a&gt;下载windows下的python安装包,选择
 &lt;code class=&quot;highlighter-rouge&quot;&gt;Windows x86-64 executable installer&lt;/code&gt;，版本自选，我选的是3.7.0&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -136,25 +136,26 @@ sudo make install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;安装numpy
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install numpy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;去网站（https://www.lfd.uci.edu/~gohlke/pythonlibs/）
-下载对应版本的opencv+contrib-python，例如”opencv_python-3.4.7+cnotrib-cp37-cp37m-win_amd64.whl”
-其中，cp37表示python3.7，amd64是64位操作系统&lt;/li&gt;
+  &lt;li&gt;安装numpy&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;（太强了，这个网站，对了，要存下来几个版本）&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;CAAAC25960E94E32849695C937448021&quot; alt=&quot;picc&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install numpy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;下载完成后，进入目录，利用pip安装&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.lfd.uci.edu/~gohlke/pythonlibs/&quot;&gt;awesome网站&lt;/a&gt;
+下载对应版本的opencv+contrib-python，例如”opencv_python-3.4.7+cnotrib-cp37-cp37m-win_amd64.whl”
+其中，cp37表示python3.7，amd64是64位操作系统&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;下载完成后，进入目录，利用pip安装&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install opencv_python-.......
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;ul&gt;
   &lt;li&gt;安装完成之后测试一下&lt;/li&gt;
 &lt;/ul&gt;
@@ -163,8 +164,7 @@ sudo make install
 &amp;gt;&amp;gt;&amp;gt;import cv2
 &amp;gt;&amp;gt;&amp;gt;print(cv2.__version__)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;opencv-contrib的下载地址，3.4.2.17，其中sift免费，不需要再装opencv-python了
-https://files.pythonhosted.org/packages/10/58/8433265d728cb603dc41c6ba04515c31ab14e490a55c4a654638e2ba9f6f/opencv_contrib_python-3.4.2.17-cp37-cp37m-win_amd64.whl&lt;/p&gt;
+&lt;p&gt;opencv-contrib的下载地址，&lt;a href=&quot;https://files.pythonhosted.org/packages/10/58/8433265d728cb603dc41c6ba04515c31ab14e490a55c4a654638e2ba9f6f/opencv_contrib_python-3.4.2.17-cp37-cp37m-win_amd64.whl&quot;&gt;3.4.2.17&lt;/a&gt;，其中sift免费，不需要再装opencv-python了&lt;/p&gt;
 
 &lt;h3 id=&quot;c-pycharm&quot;&gt;c&amp;gt; pycharm&lt;/h3&gt;
 
@@ -208,16 +208,16 @@ https://files.pythonhosted.org/packages/10/58/8433265d728cb603dc41c6ba04515c31ab
   &lt;li&gt;一篇比较全的博客：&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;https://blog.csdn.net/xunan003/article/details/81665835&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/xunan003/article/details/81665835&quot;&gt;ubuntu16.04系统run方式安装nvidia显卡驱动&lt;/a&gt;
+（里面介绍了一些安装选项怎么选，照着来一般不会有问题）&lt;/p&gt;
 
-&lt;p&gt;（里面介绍了一些安装选项怎么选，照着来一般不会有问题）
-https://zhuanlan.zhihu.com/p/65557545&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/65557545&quot;&gt;另一篇,Ubuntu安装 cuda10 + cudnn7.5 + Tensorflow2.0&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;卸载和安装and一些坑的解决：&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;https://blog.csdn.net/qq_31918961/article/details/80190397&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_31918961/article/details/80190397&quot;&gt;Ubuntu中卸载旧版nvidia驱动安装新驱动&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;（看着比较全面，就记下来了，但是具体没有试验过）&lt;/p&gt;
 
@@ -237,23 +237,19 @@ https://zhuanlan.zhihu.com/p/65557545&lt;/p&gt;
 
 &lt;h2 id=&quot;cuda&quot;&gt;cuda&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;这篇博客介绍了安装、安装选项、以及多版本共存的处理：&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/6a6fbce9073f&quot;&gt;Ubuntu 多版本Cuda(8.0,9.0)以及CuDnn安装&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://www.jianshu.com/p/6a6fbce9073f&lt;/p&gt;
-
-&lt;p&gt;（十分详细，尤其是多版本管理的方式，亲测有效）&lt;/p&gt;
+&lt;p&gt;（这篇博客介绍了安装、安装选项、以及多版本共存的处理, 十分详细，尤其是多版本管理的方式，亲测有效）&lt;/p&gt;
 
 &lt;h2 id=&quot;anaconda&quot;&gt;anaconda&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;建议先参照下面的内容安装opencv+opencv_contrib，再安装anaconda，否则安装opencv的时候会报错&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;参考博客：https://blog.csdn.net/u012318074/article/details/77074665&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/u012318074/article/details/77074665&quot;&gt;参考博客：Ubuntu 安装 Anaconda3 详细步骤&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;官方下载地址：https://www.continuum.io/downloads&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;官方下载地址&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;所有安装包地址：https://repo.continuum.io/archive/&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://repo.continuum.io/archive/&quot;&gt;所有安装包地址&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;官网下载较慢，在所有安装包下载地址下载较快。&lt;/p&gt;
 
@@ -272,7 +268,7 @@ conda -V
 
 &lt;h2 id=&quot;pytorch&quot;&gt;pytorch&lt;/h2&gt;
 
-&lt;p&gt;pytorch 和 TensorFlow建议用conda创建虚拟环境以区分不同的版本，创建虚拟环境的时候可以指定python版本，之后利用conda安装pytorch，去官网查看安装命令[https://pytorch.org/get-started/locally/]。&lt;/p&gt;
+&lt;p&gt;pytorch 和 TensorFlow建议用conda创建虚拟环境以区分不同的版本，创建虚拟环境的时候可以指定python版本，之后利用conda安装pytorch，去&lt;a href=&quot;https://pytorch.org/get-started/locally/&quot;&gt;官网查看安装命令&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;（官网中conda安装pytorch的命令会将pytorch和torchversion一起装上，这个过程需要网络比较好，安装过程很慢，pip安装较快，但是torchversion需要分开装，个人建议使用conda安装，注意各个版本和cuda的对应关系）&lt;/p&gt;
 
@@ -280,30 +276,7 @@ conda -V
 
 &lt;p&gt;（———2019-11-22补充———————）&lt;/p&gt;
 
-&lt;p&gt;针对conda安装pytorch速率慢的解决方法是换国内源，具体可以参考如下两条博客：&lt;/p&gt;
-
-&lt;p&gt;https://blog.csdn.net/daydayjump/article/details/88562684
-https://www.jianshu.com/p/409f152f1f25&lt;/p&gt;
-
-&lt;p&gt;首先，运行下面两条代码：&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-
-$ conda config --setshow_channel_urls yes
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;此时，会生成~/.condarc 文件。然后，gedit ~/.condarc 编辑该文件，将内容换成如下：&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;channels:
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
-  - defaults
-show_channel_urls: true
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;上文中前两个属于anaconda python的基础免费仓库镜像，最后一个属于pytorch的仓库镜像。注意想要下载pytorch要加上第三个镜像地址。&lt;/p&gt;
-
-&lt;p&gt;最后，更新源地址：&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ source ~/.condarc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;针对conda安装pytorch速率慢的解决方法是换国内源，具体可以参考&lt;a href=&quot;https://zhangruixiang-whu.github.io/2019/10/10/pip&amp;amp;conda-%E6%8D%A2%E6%BA%90.html&quot;&gt;另一篇博客&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;opencv--opencv_contrib&quot;&gt;opencv + opencv_contrib&lt;/h2&gt;
 
@@ -349,29 +322,25 @@ cmake ..
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;make -j8
 sudo make install 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;两篇由于提前安装anaconda3，结果make报错的解决方法（但是试过好像没有解决问题）
-https://blog.csdn.net/ZT0518/article/details/83445308
-https://blog.csdn.net/Zafir_410/article/details/74357544&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/ZT0518/article/details/83445308&quot;&gt;Makefile:160: recipe for target ‘all’ failed(ubuntu16.04+opencv3.4+gcc5.4.0)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/Zafir_410/article/details/74357544&quot;&gt;Makefile:160: recipe for target ‘all’ failed（Ubuntu 16.06 + Opencv3.2）解决办法&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;ros&quot;&gt;ROS&lt;/h2&gt;
-&lt;p&gt;官网给出了详细的安装教程：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://wiki.ros.org/ROS/Installation&quot;&gt;官网&lt;/a&gt;给出了详细的安装教程：&lt;/p&gt;
 
-&lt;p&gt;http://wiki.ros.org/ROS/Installation&lt;/p&gt;
-
-&lt;p&gt;这篇博客算是官网的翻译版，挺好的：&lt;/p&gt;
-
-&lt;p&gt;https://www.cnblogs.com/liu-fa/p/5779206.html&lt;/p&gt;
+&lt;p&gt;这篇&lt;a href=&quot;https://www.cnblogs.com/liu-fa/p/5779206.html&quot;&gt;博客&lt;/a&gt;算是官网的翻译版，挺好的：&lt;/p&gt;
 
 &lt;h2 id=&quot;python安装opencvopencv_contrib&quot;&gt;Python安装opencv+opencv_contrib&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo python3 -m pip install opencv-python
-sudo python3 -m pip uninstall opencv-python
-sudo python3 -m pip install opencv-contrib-python
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;附上pip3安装升级教程链接&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo python3 -m pip install opencv-python #安装opencv-python
 
-&lt;p&gt;https://blog.csdn.net/tiweeny/article/details/78384633&lt;/p&gt;
+sudo python3 -m pip uninstall opencv-python #卸载opencv-python
+sudo python3 -m pip install opencv-contrib-python #安装opencv-contrib-python，这个里面包含的opencv和opencv-contrib，不需要装opencv，所以上一步需要卸掉
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;附上&lt;a href=&quot;https://blog.csdn.net/tiweeny/article/details/78384633&quot;&gt;pip3安装升级教程链接&lt;/a&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 11 Oct 2019 00:00:00 +0800</pubDate>

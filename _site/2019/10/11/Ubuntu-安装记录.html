@@ -172,16 +172,16 @@ Author: Ray-Eldath
   <li>一篇比较全的博客：</li>
 </ul>
 
-<p>https://blog.csdn.net/xunan003/article/details/81665835</p>
+<p><a href="https://blog.csdn.net/xunan003/article/details/81665835">ubuntu16.04系统run方式安装nvidia显卡驱动</a>
+（里面介绍了一些安装选项怎么选，照着来一般不会有问题）</p>
 
-<p>（里面介绍了一些安装选项怎么选，照着来一般不会有问题）
-https://zhuanlan.zhihu.com/p/65557545</p>
+<p><a href="https://zhuanlan.zhihu.com/p/65557545">另一篇,Ubuntu安装 cuda10 + cudnn7.5 + Tensorflow2.0</a></p>
 
 <ul>
   <li>卸载和安装and一些坑的解决：</li>
 </ul>
 
-<p>https://blog.csdn.net/qq_31918961/article/details/80190397</p>
+<p><a href="https://blog.csdn.net/qq_31918961/article/details/80190397">Ubuntu中卸载旧版nvidia驱动安装新驱动</a></p>
 
 <p>（看着比较全面，就记下来了，但是具体没有试验过）</p>
 
@@ -201,23 +201,19 @@ https://zhuanlan.zhihu.com/p/65557545</p>
 
 <h2 id="cuda">cuda</h2>
 
-<ul>
-  <li>这篇博客介绍了安装、安装选项、以及多版本共存的处理：</li>
-</ul>
+<p><a href="https://www.jianshu.com/p/6a6fbce9073f">Ubuntu 多版本Cuda(8.0,9.0)以及CuDnn安装</a></p>
 
-<p>https://www.jianshu.com/p/6a6fbce9073f</p>
-
-<p>（十分详细，尤其是多版本管理的方式，亲测有效）</p>
+<p>（这篇博客介绍了安装、安装选项、以及多版本共存的处理, 十分详细，尤其是多版本管理的方式，亲测有效）</p>
 
 <h2 id="anaconda">anaconda</h2>
 
 <p><strong>建议先参照下面的内容安装opencv+opencv_contrib，再安装anaconda，否则安装opencv的时候会报错</strong></p>
 
-<p>参考博客：https://blog.csdn.net/u012318074/article/details/77074665</p>
+<p><a href="https://blog.csdn.net/u012318074/article/details/77074665">参考博客：Ubuntu 安装 Anaconda3 详细步骤</a></p>
 
-<p>官方下载地址：https://www.continuum.io/downloads</p>
+<p><a href="https://www.continuum.io/downloads">官方下载地址</a></p>
 
-<p>所有安装包地址：https://repo.continuum.io/archive/</p>
+<p><a href="https://repo.continuum.io/archive/">所有安装包地址</a></p>
 
 <p>官网下载较慢，在所有安装包下载地址下载较快。</p>
 
@@ -236,7 +232,7 @@ conda -V
 
 <h2 id="pytorch">pytorch</h2>
 
-<p>pytorch 和 TensorFlow建议用conda创建虚拟环境以区分不同的版本，创建虚拟环境的时候可以指定python版本，之后利用conda安装pytorch，去官网查看安装命令[https://pytorch.org/get-started/locally/]。</p>
+<p>pytorch 和 TensorFlow建议用conda创建虚拟环境以区分不同的版本，创建虚拟环境的时候可以指定python版本，之后利用conda安装pytorch，去<a href="https://pytorch.org/get-started/locally/">官网查看安装命令</a>。</p>
 
 <p>（官网中conda安装pytorch的命令会将pytorch和torchversion一起装上，这个过程需要网络比较好，安装过程很慢，pip安装较快，但是torchversion需要分开装，个人建议使用conda安装，注意各个版本和cuda的对应关系）</p>
 
@@ -244,30 +240,7 @@ conda -V
 
 <p>（———2019-11-22补充———————）</p>
 
-<p>针对conda安装pytorch速率慢的解决方法是换国内源，具体可以参考如下两条博客：</p>
-
-<p>https://blog.csdn.net/daydayjump/article/details/88562684
-https://www.jianshu.com/p/409f152f1f25</p>
-
-<p>首先，运行下面两条代码：</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-
-$ conda config --setshow_channel_urls yes
-
-</code></pre></div></div>
-<p>此时，会生成~/.condarc 文件。然后，gedit ~/.condarc 编辑该文件，将内容换成如下：</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>channels:
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
-  - defaults
-show_channel_urls: true
-</code></pre></div></div>
-<p>上文中前两个属于anaconda python的基础免费仓库镜像，最后一个属于pytorch的仓库镜像。注意想要下载pytorch要加上第三个镜像地址。</p>
-
-<p>最后，更新源地址：</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source ~/.condarc
-</code></pre></div></div>
+<p>针对conda安装pytorch速率慢的解决方法是换国内源，具体可以参考<a href="https://zhangruixiang-whu.github.io/2019/10/10/pip&amp;conda-%E6%8D%A2%E6%BA%90.html">另一篇博客</a></p>
 
 <h2 id="opencv--opencv_contrib">opencv + opencv_contrib</h2>
 
@@ -313,29 +286,25 @@ cmake ..
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make -j8
 sudo make install 
 </code></pre></div>    </div>
-    <p>两篇由于提前安装anaconda3，结果make报错的解决方法（但是试过好像没有解决问题）
-https://blog.csdn.net/ZT0518/article/details/83445308
-https://blog.csdn.net/Zafir_410/article/details/74357544</p>
   </li>
 </ul>
 
+<p><a href="https://blog.csdn.net/ZT0518/article/details/83445308">Makefile:160: recipe for target ‘all’ failed(ubuntu16.04+opencv3.4+gcc5.4.0)</a></p>
+
+<p><a href="https://blog.csdn.net/Zafir_410/article/details/74357544">Makefile:160: recipe for target ‘all’ failed（Ubuntu 16.06 + Opencv3.2）解决办法</a></p>
+
 <h2 id="ros">ROS</h2>
-<p>官网给出了详细的安装教程：</p>
+<p><a href="http://wiki.ros.org/ROS/Installation">官网</a>给出了详细的安装教程：</p>
 
-<p>http://wiki.ros.org/ROS/Installation</p>
-
-<p>这篇博客算是官网的翻译版，挺好的：</p>
-
-<p>https://www.cnblogs.com/liu-fa/p/5779206.html</p>
+<p>这篇<a href="https://www.cnblogs.com/liu-fa/p/5779206.html">博客</a>算是官网的翻译版，挺好的：</p>
 
 <h2 id="python安装opencvopencv_contrib">Python安装opencv+opencv_contrib</h2>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo python3 -m pip install opencv-python
-sudo python3 -m pip uninstall opencv-python
-sudo python3 -m pip install opencv-contrib-python
-</code></pre></div></div>
-<p>附上pip3安装升级教程链接</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo python3 -m pip install opencv-python #安装opencv-python
 
-<p>https://blog.csdn.net/tiweeny/article/details/78384633</p>
+sudo python3 -m pip uninstall opencv-python #卸载opencv-python
+sudo python3 -m pip install opencv-contrib-python #安装opencv-contrib-python，这个里面包含的opencv和opencv-contrib，不需要装opencv，所以上一步需要卸掉
+</code></pre></div></div>
+<p>附上<a href="https://blog.csdn.net/tiweeny/article/details/78384633">pip3安装升级教程链接</a></p>
 
 
     </article>

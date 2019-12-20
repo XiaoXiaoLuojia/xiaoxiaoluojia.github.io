@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>江城子 夏行 - 子虚乌有的博客小屋</title>
+    <title>Test - 子虚乌有的博客小屋</title>
     <meta name="author"  content="张瑞祥">
-    <meta name="description" content="江城子 夏行">
+    <meta name="description" content="Test">
     <meta name="keywords"  content="诗词画意">
     <!-- Open Graph -->
-    <meta property="og:title" content="江城子 夏行 - 子虚乌有的博客小屋">
+    <meta property="og:title" content="Test - 子虚乌有的博客小屋">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:4000/2019/08/04/%E6%B1%9F%E5%9F%8E%E5%AD%90-%E5%A4%8F%E8%A1%8C.html">
+    <meta property="og:url" content="http://localhost:4000/2019/10/10/test.html">
     <meta property="og:description" content="很高兴能在这里见到你，我叫张瑞祥，给自己起了个假笔名叫子虚乌有，90后，多愁善感，不会舞文弄墨确偏要写诗赋词的理工男~">
     <meta property="og:site_name" content="子虚乌有的博客小屋">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -143,10 +143,10 @@ Author: Ray-Eldath
           
         
       </div>
-      <h1>江城子 夏行</h1>
+      <h1>Test</h1>
       <div class="post-meta">
         <span class="post-meta-item"><i class="iconfont icon-author"></i>张瑞祥</span>
-        <time class="post-meta-item" datetime="19-08-04"><i class="iconfont icon-date"></i>04 Aug 2019</time>
+        <time class="post-meta-item" datetime="19-10-10"><i class="iconfont icon-date"></i>10 Oct 2019</time>
       </div>
     </div>
     
@@ -157,50 +157,160 @@ Author: Ray-Eldath
 
     <article class="markdown-body">
       <ul id="markdown-toc">
-  <li><a href="#诗词" id="markdown-toc-诗词">诗词</a></li>
-  <li><a href="#背景介绍" id="markdown-toc-背景介绍">背景介绍</a></li>
-  <li><a href="#解释心路历程" id="markdown-toc-解释心路历程">解释/心路历程</a></li>
+  <li><a href="#服务器的连接使用" id="markdown-toc-服务器的连接使用">服务器的连接使用</a>    <ul>
+      <li><a href="#ssh-连接" id="markdown-toc-ssh-连接">SSH 连接</a></li>
+      <li><a href="#tmux使用" id="markdown-toc-tmux使用">Tmux使用</a>        <ul>
+          <li><a href="#tmux-安装" id="markdown-toc-tmux-安装">tmux 安装</a></li>
+          <li><a href="#创建配置文件" id="markdown-toc-创建配置文件">创建配置文件</a></li>
+          <li><a href="#使用" id="markdown-toc-使用">使用</a></li>
+        </ul>
+      </li>
+      <li><a href="#tips" id="markdown-toc-tips">Tips</a>        <ul>
+          <li><a href="#进入服务器没有用户名只有一个符号直接输入" id="markdown-toc-进入服务器没有用户名只有一个符号直接输入">进入服务器没有用户名，只有一个$符号，直接输入</a></li>
+          <li><a href="#查看进程类似任务管理器" id="markdown-toc-查看进程类似任务管理器">查看进程（类似任务管理器）</a></li>
+          <li><a href="#查看显卡状态" id="markdown-toc-查看显卡状态">查看显卡状态</a></li>
+          <li><a href="#vim编辑" id="markdown-toc-vim编辑">Vim编辑</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<h2 id="诗词">诗词</h2>
+<h1 id="服务器的连接使用">服务器的连接使用</h1>
 
-<hr />
+<h2 id="ssh-连接">SSH 连接</h2>
 
-<p>                  <strong>江城子 夏行</strong></p>
+<h2 id="tmux使用">Tmux使用</h2>
 
-<p>                          
-现 张子虚</p>
+<h3 id="tmux-安装">tmux 安装</h3>
 
-<p>  相逢于信，求学紫金，儒亿闲卧听蝉鸣，忆往昔，迷途大梦方醒。正是临安柳色青，西湖良景，叹，无心，无行。</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt install tmux
+</code></pre></div></div>
 
-<p>  书山不平，一点寒星，本欲独自把烛秉，现而今，前路有君伴行。待到江城车马停，客舍对影，听，有琴，有情。</p>
+<h3 id="创建配置文件">创建配置文件</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gedit ~/.tmux.conf
+</code></pre></div></div>
+<p>在tmux.conf中加入如下内容:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set -g mouse on
 
-<p> </p>
+set -g default-terminal "screen-256color"
+set -g display-time 3000
+set -g escape-time 0
+set -g history-limit 65535
+set -g base-index 1
+set -g pane-base-index 1
 
-<p> </p>
+setw -g monitor-activity on
+set -g visual-activity on
 
-<h2 id="背景介绍">背景介绍</h2>
-<hr />
+set -g status-justify centre
 
-<p>  这首词作于己亥年七月初四寅时，七月初三，我和同届的浩文、小赵、岩哥、皓哥约在光谷玩了一下午，期间吃了顿饭，聊了很多东西，出来玩了一次，几个人之间的感情也更深了一点，又想起前不久，四人一起去杭州听课，友谊就在那时开始扎根，发芽，夜半，睡不着，遂提笔，著此篇。</p>
+# Send prefix
+set-option -g prefix C-a
+unbind-key C-a
+bind-key C-a send-prefix
 
-<p> </p>
+# Use Alt-arrow keys to switch panes
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
 
-<h2 id="解释心路历程">解释/心路历程</h2>
-<hr />
+# Shift arrow to switch windows
+bind -n S-Left previous-window
+bind -n S-Right next-window
+
+
+# Set easier window split keys
+bind-key v split-window -h
+bind-key h split-window -v
+
+# Easy config reload
+bind-key r source-file ~/.tmux.conf \; display-message "tmux.conf reloaded"
+
+# keep path in new windows
+bind v split-window -h -c "#{pane_current_path}"
+bind h split-window -c "#{pane_current_path}"
+
+</code></pre></div></div>
+<h3 id="使用">使用</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 创建新的session
+$ tmux new -s session_NAME
+
+## 查看当前打开的session
+$ tmux ls
+
+## 进入已经创建的session
+$ tmux a -t exist_NAME 
+
+
+# 使用会话编号关闭session
+$ tmux kill-session -t 0
+
+# 使用会话名称关闭session
+$ tmux kill-session -t &lt;session-name&gt;
+</code></pre></div></div>
+
 <ul>
-  <li>
-    <p>临安：杭州旧称</p>
-  </li>
-  <li>
-    <p>江城：武汉旧称</p>
-  </li>
+  <li>快捷键</li>
 </ul>
 
-<p>  一行人在电信学院相逢，又是这一行人（缺浩文）去杭州大学紫金港校区去参加暑期课程，去杭州定的酒店是唐人儒亿酒店，那时的杭州，树上的知鸟真的吵。参加的课听不懂，感觉自己知识少，真的是荒废了四年的好时光。杭州景色正浓，却都没有心思去西湖看一看。
-（Actually，是因为沉迷于打牌无法自拔，才没去西湖，哈哈哈）</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>先按 ctrl+按Ａ, 松开后再按
+h　　纵向创建窗口
+v　　横向创建窗口
+x,y  删除当前窗口
+c　　缓存bash，点击可切换
+</code></pre></div></div>
 
-<p>  昨日在武汉玩到很晚，吃饭的时候，就学习上的前景、方向聊了很多，想着这么多人陪着一起走下去，就觉得以后路上也并不孤单，友情，有情。</p>
+<p>命令行操作</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 划分上下两个窗格
+$ tmux split-window
+
+# 划分左右两个窗格
+$ tmux split-window -h
+
+# 光标切换到上方窗格
+$ tmux select-pane -U
+
+# 光标切换到下方窗格
+$ tmux select-pane -D
+
+# 光标切换到左边窗格
+$ tmux select-pane -L
+
+# 光标切换到右边窗格
+$ tmux select-pane -R
+</code></pre></div></div>
+
+<h2 id="tips">Tips</h2>
+
+<h3 id="进入服务器没有用户名只有一个符号直接输入">进入服务器没有用户名，只有一个$符号，直接输入</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bash
+</code></pre></div></div>
+<p>然后回车就好</p>
+
+<h3 id="查看进程类似任务管理器">查看进程（类似任务管理器）</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ htop
+</code></pre></div></div>
+
+<h3 id="查看显卡状态">查看显卡状态</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ watch -n 1 -d nvidia-smi
+</code></pre></div></div>
+
+<h3 id="vim编辑">Vim编辑</h3>
+<p>连接服务器的时候gedit有时候打不开文件，可以用vim进行编辑，需要掌握vim编辑的简单技巧
+‘’’
+https://www.runoob.com/linux/linux-vim.html
+‘’’</p>
+
+<p>这是vim的教程</p>
+
+<p>常用的：</p>
+
+<p>vim打开文件是命令模式，按i, 进入插入模式（编辑模式），可以进行编辑，编辑完之后按esc回到命令模式，然后按‘：wq’，回车即可保存退出。</p>
+
 
     </article>
 
@@ -244,21 +354,12 @@ Author: Ray-Eldath
     </section>
     <section class="post-footer-item read-next">
       
-      <div class="read-next-item">
-        <a href="/2019/08/09/%E6%97%A0%E8%A8%80.html" class="read-next-link"></a>
-        <section>
-          <span>无言</span>
-          <p></p>
-        </section>
-        
-     </div>
-      
 
       
       <div class="read-next-item">
-        <a href="/2019/08/02/%E9%9B%A8%E9%9C%96%E9%93%83-%E8%B5%A0%E5%88%AB%E5%8F%AF%E4%B8%BA.html" class="read-next-link"></a>
+        <a href="/2019/09/13/%E5%BF%86%E4%B8%AD%E7%A7%8B.html" class="read-next-link"></a>
           <section>
-            <span>雨霖铃 赠别可为</span>
+            <span>忆中秋</span>
             <p></p>
           </section>
           

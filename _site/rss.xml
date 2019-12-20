@@ -5,9 +5,178 @@
     <description>很高兴能在这里见到你，我叫张瑞祥，给自己起了个假笔名叫子虚乌有，90后，多愁善感，不会舞文弄墨确偏要写诗赋词的理工男~</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 22 Nov 2019 18:14:14 +0800</pubDate>
-    <lastBuildDate>Fri, 22 Nov 2019 18:14:14 +0800</lastBuildDate>
+    <pubDate>Sat, 21 Dec 2019 00:00:54 +0800</pubDate>
+    <lastBuildDate>Sat, 21 Dec 2019 00:00:54 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Test</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#服务器的连接使用&quot; id=&quot;markdown-toc-服务器的连接使用&quot;&gt;服务器的连接使用&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#ssh-连接&quot; id=&quot;markdown-toc-ssh-连接&quot;&gt;SSH 连接&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#tmux使用&quot; id=&quot;markdown-toc-tmux使用&quot;&gt;Tmux使用&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#tmux-安装&quot; id=&quot;markdown-toc-tmux-安装&quot;&gt;tmux 安装&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#创建配置文件&quot; id=&quot;markdown-toc-创建配置文件&quot;&gt;创建配置文件&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#使用&quot; id=&quot;markdown-toc-使用&quot;&gt;使用&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#tips&quot; id=&quot;markdown-toc-tips&quot;&gt;Tips&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#进入服务器没有用户名只有一个符号直接输入&quot; id=&quot;markdown-toc-进入服务器没有用户名只有一个符号直接输入&quot;&gt;进入服务器没有用户名，只有一个$符号，直接输入&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#查看进程类似任务管理器&quot; id=&quot;markdown-toc-查看进程类似任务管理器&quot;&gt;查看进程（类似任务管理器）&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#查看显卡状态&quot; id=&quot;markdown-toc-查看显卡状态&quot;&gt;查看显卡状态&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#vim编辑&quot; id=&quot;markdown-toc-vim编辑&quot;&gt;Vim编辑&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;服务器的连接使用&quot;&gt;服务器的连接使用&lt;/h1&gt;
+
+&lt;h2 id=&quot;ssh-连接&quot;&gt;SSH 连接&lt;/h2&gt;
+
+&lt;h2 id=&quot;tmux使用&quot;&gt;Tmux使用&lt;/h2&gt;
+
+&lt;h3 id=&quot;tmux-安装&quot;&gt;tmux 安装&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo apt install tmux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;创建配置文件&quot;&gt;创建配置文件&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gedit ~/.tmux.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;在tmux.conf中加入如下内容:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;set -g mouse on
+
+set -g default-terminal &quot;screen-256color&quot;
+set -g display-time 3000
+set -g escape-time 0
+set -g history-limit 65535
+set -g base-index 1
+set -g pane-base-index 1
+
+setw -g monitor-activity on
+set -g visual-activity on
+
+set -g status-justify centre
+
+# Send prefix
+set-option -g prefix C-a
+unbind-key C-a
+bind-key C-a send-prefix
+
+# Use Alt-arrow keys to switch panes
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# Shift arrow to switch windows
+bind -n S-Left previous-window
+bind -n S-Right next-window
+
+
+# Set easier window split keys
+bind-key v split-window -h
+bind-key h split-window -v
+
+# Easy config reload
+bind-key r source-file ~/.tmux.conf \; display-message &quot;tmux.conf reloaded&quot;
+
+# keep path in new windows
+bind v split-window -h -c &quot;#{pane_current_path}&quot;
+bind h split-window -c &quot;#{pane_current_path}&quot;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;使用&quot;&gt;使用&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;## 创建新的session
+$ tmux new -s session_NAME
+
+## 查看当前打开的session
+$ tmux ls
+
+## 进入已经创建的session
+$ tmux a -t exist_NAME 
+
+
+# 使用会话编号关闭session
+$ tmux kill-session -t 0
+
+# 使用会话名称关闭session
+$ tmux kill-session -t &amp;lt;session-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;快捷键&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;先按 ctrl+按Ａ, 松开后再按
+h　　纵向创建窗口
+v　　横向创建窗口
+x,y  删除当前窗口
+c　　缓存bash，点击可切换
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;命令行操作&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 划分上下两个窗格
+$ tmux split-window
+
+# 划分左右两个窗格
+$ tmux split-window -h
+
+# 光标切换到上方窗格
+$ tmux select-pane -U
+
+# 光标切换到下方窗格
+$ tmux select-pane -D
+
+# 光标切换到左边窗格
+$ tmux select-pane -L
+
+# 光标切换到右边窗格
+$ tmux select-pane -R
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;tips&quot;&gt;Tips&lt;/h2&gt;
+
+&lt;h3 id=&quot;进入服务器没有用户名只有一个符号直接输入&quot;&gt;进入服务器没有用户名，只有一个$符号，直接输入&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;然后回车就好&lt;/p&gt;
+
+&lt;h3 id=&quot;查看进程类似任务管理器&quot;&gt;查看进程（类似任务管理器）&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ htop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;查看显卡状态&quot;&gt;查看显卡状态&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ watch -n 1 -d nvidia-smi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;vim编辑&quot;&gt;Vim编辑&lt;/h3&gt;
+&lt;p&gt;连接服务器的时候gedit有时候打不开文件，可以用vim进行编辑，需要掌握vim编辑的简单技巧
+‘’’
+https://www.runoob.com/linux/linux-vim.html
+‘’’&lt;/p&gt;
+
+&lt;p&gt;这是vim的教程&lt;/p&gt;
+
+&lt;p&gt;常用的：&lt;/p&gt;
+
+&lt;p&gt;vim打开文件是命令模式，按i, 进入插入模式（编辑模式），可以进行编辑，编辑完之后按esc回到命令模式，然后按‘：wq’，回车即可保存退出。&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 10 Oct 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/10/10/test.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/10/10/test.html</guid>
+        
+        <category>诗词画意</category>
+        
+        
+        <category>其他</category>
+        
+      </item>
     
       <item>
         <title>忆中秋</title>
@@ -945,27 +1114,6 @@
         <pubDate>Fri, 01 Feb 2019 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2019/02/01/%E6%9B%BE%E7%BB%8F%E7%9A%84%E6%9B%BE%E7%BB%8F.html</link>
         <guid isPermaLink="true">http://localhost:4000/2019/02/01/%E6%9B%BE%E7%BB%8F%E7%9A%84%E6%9B%BE%E7%BB%8F.html</guid>
-        
-        <category>诗词画意</category>
-        
-        
-        <category>其他</category>
-        
-      </item>
-    
-      <item>
-        <title>第一篇博客</title>
-        <description>
-&lt;hr /&gt;
-&lt;p&gt;  第一篇博客，初衷是自己舞文弄墨写的一些骚词无处安放，太过开放的平台上可能会惹来非议，和作诗写词让自己开心的本意就有些冲突了。后来听了夏总的建议，自己搭了一个博客小屋，把写的那些或成熟或疯癫，或真或假的诗词都放上去，给亲近的人分享，感兴趣的可以读着玩，我也可以把一些自己不敢表达的话藏在那些晦涩的诗词里，把这个博客小屋做为一个宣泄口。&lt;/p&gt;
-
-&lt;p&gt;  &lt;strong&gt;写者无意，读者有心&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;  &lt;strong&gt;孰真孰假，自断分明&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 01 Jan 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/01/01/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/01/01/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2.html</guid>
         
         <category>诗词画意</category>
         

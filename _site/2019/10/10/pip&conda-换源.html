@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tmux使用 - 子虚乌有的博客小屋</title>
+    <title>pip&conda 换源 - 子虚乌有的博客小屋</title>
     <meta name="author"  content="张瑞祥">
-    <meta name="description" content="Tmux使用">
+    <meta name="description" content="pip&conda 换源">
     <meta name="keywords"  content="Ubuntu">
     <!-- Open Graph -->
-    <meta property="og:title" content="Tmux使用 - 子虚乌有的博客小屋">
+    <meta property="og:title" content="pip&conda 换源 - 子虚乌有的博客小屋">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:4000/2019/10/10/Tmux%E4%BD%BF%E7%94%A8.html">
+    <meta property="og:url" content="http://localhost:4000/2019/10/10/pip&conda-%E6%8D%A2%E6%BA%90.html">
     <meta property="og:description" content="很高兴能在这里见到你，我叫张瑞祥，给自己起了个假笔名叫子虚乌有，90后，多愁善感，不会舞文弄墨确偏要写诗赋词的理工男~">
     <meta property="og:site_name" content="子虚乌有的博客小屋">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -143,7 +143,7 @@ Author: Ray-Eldath
           
         
       </div>
-      <h1>Tmux使用</h1>
+      <h1>pip&conda 换源</h1>
       <div class="post-meta">
         <span class="post-meta-item"><i class="iconfont icon-author"></i>张瑞祥</span>
         <time class="post-meta-item" datetime="19-10-10"><i class="iconfont icon-date"></i>10 Oct 2019</time>
@@ -157,159 +157,64 @@ Author: Ray-Eldath
 
     <article class="markdown-body">
       <ul id="markdown-toc">
-  <li><a href="#服务器的连接使用" id="markdown-toc-服务器的连接使用">服务器的连接使用</a>    <ul>
-      <li><a href="#ssh-连接" id="markdown-toc-ssh-连接">SSH 连接</a></li>
-      <li><a href="#tmux使用" id="markdown-toc-tmux使用">Tmux使用</a>        <ul>
-          <li><a href="#tmux-安装" id="markdown-toc-tmux-安装">tmux 安装</a></li>
-          <li><a href="#创建配置文件" id="markdown-toc-创建配置文件">创建配置文件</a></li>
-          <li><a href="#使用" id="markdown-toc-使用">使用</a></li>
-        </ul>
-      </li>
-      <li><a href="#tips" id="markdown-toc-tips">Tips</a>        <ul>
-          <li><a href="#进入服务器没有用户名只有一个符号直接输入" id="markdown-toc-进入服务器没有用户名只有一个符号直接输入">进入服务器没有用户名，只有一个$符号，直接输入</a></li>
-          <li><a href="#查看进程类似任务管理器" id="markdown-toc-查看进程类似任务管理器">查看进程（类似任务管理器）</a></li>
-          <li><a href="#查看显卡状态" id="markdown-toc-查看显卡状态">查看显卡状态</a></li>
-          <li><a href="#vim编辑" id="markdown-toc-vim编辑">Vim编辑</a></li>
-        </ul>
-      </li>
+  <li><a href="#pip--conda-换源" id="markdown-toc-pip--conda-换源">pip / conda 换源</a>    <ul>
+      <li><a href="#pip换源" id="markdown-toc-pip换源">pip换源</a></li>
+      <li><a href="#conda换源" id="markdown-toc-conda换源">conda换源</a></li>
     </ul>
   </li>
 </ul>
 
-<h1 id="服务器的连接使用">服务器的连接使用</h1>
+<h1 id="pip--conda-换源">pip / conda 换源</h1>
 
-<h2 id="ssh-连接">SSH 连接</h2>
-
-<h2 id="tmux使用">Tmux使用</h2>
-
-<h3 id="tmux-安装">tmux 安装</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt install tmux
+<h2 id="pip换源">pip换源</h2>
+<p>临时从清华源下载安装使用如下命令</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install Package_NMAE -i https://pypi.tuna.tsinghua.edu.cn/simple
 </code></pre></div></div>
 
-<h3 id="创建配置文件">创建配置文件</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gedit ~/.tmux.conf
-</code></pre></div></div>
-<p>在tmux.conf中加入如下内容:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set -g mouse on
-
-set -g default-terminal "screen-256color"
-set -g display-time 3000
-set -g escape-time 0
-set -g history-limit 65535
-set -g base-index 1
-set -g pane-base-index 1
-
-setw -g monitor-activity on
-set -g visual-activity on
-
-set -g status-justify centre
-
-# Send prefix
-set-option -g prefix C-a
-unbind-key C-a
-bind-key C-a send-prefix
-
-# Use Alt-arrow keys to switch panes
-bind -n M-Left select-pane -L
-bind -n M-Right select-pane -R
-bind -n M-Up select-pane -U
-bind -n M-Down select-pane -D
-
-# Shift arrow to switch windows
-bind -n S-Left previous-window
-bind -n S-Right next-window
-
-
-# Set easier window split keys
-bind-key v split-window -h
-bind-key h split-window -v
-
-# Easy config reload
-bind-key r source-file ~/.tmux.conf \; display-message "tmux.conf reloaded"
-
-# keep path in new windows
-bind v split-window -h -c "#{pane_current_path}"
-bind h split-window -c "#{pane_current_path}"
-
-</code></pre></div></div>
-<h3 id="使用">使用</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 创建新的session
-$ tmux new -s session_NAME
-
-## 查看当前打开的session
-$ tmux ls
-
-## 进入已经创建的session
-$ tmux a -t exist_NAME 
-
-
-# 使用会话编号关闭session
-$ tmux kill-session -t 0
-
-# 使用会话名称关闭session
-$ tmux kill-session -t &lt;session-name&gt;
-</code></pre></div></div>
+<p>永久性换源</p>
 
 <ul>
-  <li>快捷键</li>
+  <li>升级 pip 到最新的版本 (&gt;=10.0.0) 后进行配置：
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pip -U
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+</code></pre></div>    </div>
+  </li>
+  <li>如果您到 pip 默认源的网络连接较差，临时使用本镜像站来升级 pip：
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
+</code></pre></div>    </div>
+    <p>(参考链接　https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)</p>
+  </li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>先按 ctrl+按Ａ, 松开后再按
-h　　纵向创建窗口
-v　　横向创建窗口
-x,y  删除当前窗口
-c　　缓存bash，点击可切换
+<p>另一种方法</p>
+
+<p>修改 ~/.pip/pip.conf (没有就创建一个)， 内容如下：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 </code></pre></div></div>
 
-<p>命令行操作</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 划分上下两个窗格
-$ tmux split-window
-
-# 划分左右两个窗格
-$ tmux split-window -h
-
-# 光标切换到上方窗格
-$ tmux select-pane -U
-
-# 光标切换到下方窗格
-$ tmux select-pane -D
-
-# 光标切换到左边窗格
-$ tmux select-pane -L
-
-# 光标切换到右边窗格
-$ tmux select-pane -R
+<h2 id="conda换源">conda换源</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/menpo/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+conda config --set show_channel_urls yes
 </code></pre></div></div>
 
-<h2 id="tips">Tips</h2>
-
-<h3 id="进入服务器没有用户名只有一个符号直接输入">进入服务器没有用户名，只有一个$符号，直接输入</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bash
+<p>也可以直接编辑<code class="highlighter-rouge">~/.condarc</code>,把下面的内容复制上去</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/menpo/ 
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - defaults
+show_channel_urls: true
 </code></pre></div></div>
-<p>然后回车就好</p>
-
-<h3 id="查看进程类似任务管理器">查看进程（类似任务管理器）</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ htop
-</code></pre></div></div>
-
-<h3 id="查看显卡状态">查看显卡状态</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ watch -n 1 -d nvidia-smi
-</code></pre></div></div>
-
-<h3 id="vim编辑">Vim编辑</h3>
-<p>连接服务器的时候gedit有时候打不开文件，可以用vim进行编辑，需要掌握vim编辑的简单技巧
-‘’’
-https://www.runoob.com/linux/linux-vim.html
-‘’’</p>
-
-<p>这是vim的教程</p>
-
-<p>常用的：</p>
-
-<p>vim打开文件是命令模式，按i, 进入插入模式（编辑模式），可以进行编辑，编辑完之后按esc回到命令模式，然后按‘：wq’，回车即可保存退出。</p>
 
 
     </article>
@@ -355,9 +260,9 @@ https://www.runoob.com/linux/linux-vim.html
     <section class="post-footer-item read-next">
       
       <div class="read-next-item">
-        <a href="/2019/10/10/pip&conda-%E6%8D%A2%E6%BA%90.html" class="read-next-link"></a>
+        <a href="/2019/10/11/Ubuntu-%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95.html" class="read-next-link"></a>
         <section>
-          <span>pip&conda 换源</span>
+          <span>Ubuntu 安装记录</span>
           <p></p>
         </section>
         
@@ -366,9 +271,9 @@ https://www.runoob.com/linux/linux-vim.html
 
       
       <div class="read-next-item">
-        <a href="/2019/09/13/%E5%BF%86%E4%B8%AD%E7%A7%8B.html" class="read-next-link"></a>
+        <a href="/2019/10/10/Tmux%E4%BD%BF%E7%94%A8.html" class="read-next-link"></a>
           <section>
-            <span>忆中秋</span>
+            <span>Tmux使用</span>
             <p></p>
           </section>
           

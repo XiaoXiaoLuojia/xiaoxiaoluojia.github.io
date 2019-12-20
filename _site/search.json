@@ -7,9 +7,21 @@
     } ,
   
     {
+      "title"    : "Windows下安装记录",
+      "tags"     : "Windows",
+      "url"      : "/2019/10/11/Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95.html"
+    } ,
+  
+    {
       "title"    : "Ubuntu 安装记录",
       "tags"     : "Ubuntu",
       "url"      : "/2019/10/11/Ubuntu-%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95.html"
+    } ,
+  
+    {
+      "title"    : "pip&amp;conda 换源",
+      "tags"     : "Ubuntu",
+      "url"      : "/2019/10/10/pip&conda-%E6%8D%A2%E6%BA%90.html"
     } ,
   
     {

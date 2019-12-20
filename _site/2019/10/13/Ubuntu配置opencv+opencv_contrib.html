@@ -196,19 +196,25 @@ cmake ..
 </code></pre></div></div>
 
 <ul>
-  <li>cmake
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D CMAKE_BUILD_TYPE=Release -D OPENCV_EXTRA_MODULES_PATH=YOUR-PATH/opencv_contrib/modules -D OPENCV_ENABLE_NONFREE:BOOL=ON ..
-</code></pre></div>    </div>
-  </li>
-  <li>make
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make -j8
-sudo make install 
-</code></pre></div>    </div>
-    <p>两篇由于提前安装anaconda3，结果make报错的解决方法（但是试过好像没有解决问题）
-https://blog.csdn.net/ZT0518/article/details/83445308
-https://blog.csdn.net/Zafir_410/article/details/74357544</p>
-  </li>
+  <li>cmake</li>
 </ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D CMAKE_BUILD_TYPE=Release -D OPENCV_EXTRA_MODULES_PATH=YOUR-PATH/opencv_contrib/modules -D OPENCV_ENABLE_NONFREE:BOOL=ON ..
+</code></pre></div></div>
+
+<ul>
+  <li>make</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make -j8
+sudo make install 
+</code></pre></div></div>
+
+<p>两篇由于提前安装anaconda3，结果make报错的解决方法（但是试过好像没有解决问题）</p>
+
+<p><a href="https://blog.csdn.net/ZT0518/article/details/83445308">Makefile:160: recipe for target ‘all’ failed(ubuntu16.04+opencv3.4+gcc5.4.0)</a></p>
+
+<p><a href="https://blog.csdn.net/Zafir_410/article/details/74357544">Makefile:160: recipe for target ‘all’ failed（Ubuntu 16.06 + Opencv3.2）解决办法</a></p>
 
 
     </article>
@@ -256,9 +262,9 @@ https://blog.csdn.net/Zafir_410/article/details/74357544</p>
 
       
       <div class="read-next-item">
-        <a href="/2019/10/11/Ubuntu-%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95.html" class="read-next-link"></a>
+        <a href="/2019/10/11/Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95.html" class="read-next-link"></a>
           <section>
-            <span>Ubuntu 安装记录</span>
+            <span>Windows下安装记录</span>
             <p></p>
           </section>
           

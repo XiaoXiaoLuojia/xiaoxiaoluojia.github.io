@@ -5,8 +5,8 @@
     <description>很高兴能在这里见到你，我叫张瑞祥，给自己起了个假笔名叫子虚乌有，90后，多愁善感，不会舞文弄墨确偏要写诗赋词的理工男~</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 21 Dec 2019 00:22:44 +0800</pubDate>
-    <lastBuildDate>Sat, 21 Dec 2019 00:22:44 +0800</lastBuildDate>
+    <pubDate>Sat, 21 Dec 2019 00:43:43 +0800</pubDate>
+    <lastBuildDate>Sat, 21 Dec 2019 00:43:43 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -51,19 +51,25 @@ cmake ..
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;cmake
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D CMAKE_BUILD_TYPE=Release -D OPENCV_EXTRA_MODULES_PATH=YOUR-PATH/opencv_contrib/modules -D OPENCV_ENABLE_NONFREE:BOOL=ON ..
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;make
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;make -j8
-sudo make install 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;两篇由于提前安装anaconda3，结果make报错的解决方法（但是试过好像没有解决问题）
-https://blog.csdn.net/ZT0518/article/details/83445308
-https://blog.csdn.net/Zafir_410/article/details/74357544&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;cmake&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D CMAKE_BUILD_TYPE=Release -D OPENCV_EXTRA_MODULES_PATH=YOUR-PATH/opencv_contrib/modules -D OPENCV_ENABLE_NONFREE:BOOL=ON ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;make&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;make -j8
+sudo make install 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;两篇由于提前安装anaconda3，结果make报错的解决方法（但是试过好像没有解决问题）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/ZT0518/article/details/83445308&quot;&gt;Makefile:160: recipe for target ‘all’ failed(ubuntu16.04+opencv3.4+gcc5.4.0)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/Zafir_410/article/details/74357544&quot;&gt;Makefile:160: recipe for target ‘all’ failed（Ubuntu 16.06 + Opencv3.2）解决办法&lt;/a&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 13 Oct 2019 00:00:00 +0800</pubDate>
@@ -71,6 +77,113 @@ https://blog.csdn.net/Zafir_410/article/details/74357544&lt;/p&gt;
         <guid isPermaLink="true">http://localhost:4000/2019/10/13/Ubuntu%E9%85%8D%E7%BD%AEopencv+opencv_contrib.html</guid>
         
         <category>Ubuntu</category>
+        
+        
+        <category>安装记录</category>
+        
+      </item>
+    
+      <item>
+        <title>Windows下安装记录</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#pythonpycharmpython-opencvcontrib&quot; id=&quot;markdown-toc-pythonpycharmpython-opencvcontrib&quot;&gt;Python+Pycharm+python-opencv&amp;amp;contrib&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#a-安装python&quot; id=&quot;markdown-toc-a-安装python&quot;&gt;a&amp;gt; 安装python&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#b-安装opencvcontrib&quot; id=&quot;markdown-toc-b-安装opencvcontrib&quot;&gt;b&amp;gt; 安装opencv+contrib&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#c-pycharm&quot; id=&quot;markdown-toc-c-pycharm&quot;&gt;c&amp;gt; pycharm&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#vsopencvcontrib&quot; id=&quot;markdown-toc-vsopencvcontrib&quot;&gt;VS+opencv+contrib&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;pythonpycharmpython-opencvcontrib&quot;&gt;Python+Pycharm+python-opencv&amp;amp;contrib&lt;/h2&gt;
+
+&lt;p&gt;pycharm自己搜一下，很好装的，社区版就够了&lt;/p&gt;
+
+&lt;h3 id=&quot;a-安装python&quot;&gt;a&amp;gt; 安装python&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;两篇比较全的博客&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;https://blog.csdn.net/lwplwf/article/details/61616493&lt;/p&gt;
+
+&lt;p&gt;https://blog.csdn.net/cairencong/article/details/82709317&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;首先，去python官网( https://www.python.org/downloads/windows/ )下载windows下的python安装包,选择
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Windows x86-64 executable installer&lt;/code&gt;，版本自选，我选的是3.7.0&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;下载完成之后，双击运行，安装即可。
+（安装时，记得勾选“添加python到环境变量”）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;安装完成之后，打开cmd或者powershell，运行python：&lt;/p&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ python 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;可以看到安装的python版本信息。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;b-安装opencvcontrib&quot;&gt;b&amp;gt; 安装opencv+contrib&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;首先更新pip&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python -m pip install -U pip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;安装numpy
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install numpy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;去网站（https://www.lfd.uci.edu/~gohlke/pythonlibs/）
+下载对应版本的opencv+contrib-python，例如”opencv_python-3.4.7+cnotrib-cp37-cp37m-win_amd64.whl”
+其中，cp37表示python3.7，amd64是64位操作系统&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;（太强了，这个网站，对了，要存下来几个版本）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;CAAAC25960E94E32849695C937448021&quot; alt=&quot;picc&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;下载完成后，进入目录，利用pip安装&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install opencv_python-.......
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;安装完成之后测试一下&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; python
+&amp;gt;&amp;gt;&amp;gt;import cv2
+&amp;gt;&amp;gt;&amp;gt;print(cv2.__version__)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;opencv-contrib的下载地址，3.4.2.17，其中sift免费，不需要再装opencv-python了
+https://files.pythonhosted.org/packages/10/58/8433265d728cb603dc41c6ba04515c31ab14e490a55c4a654638e2ba9f6f/opencv_contrib_python-3.4.2.17-cp37-cp37m-win_amd64.whl&lt;/p&gt;
+
+&lt;h3 id=&quot;c-pycharm&quot;&gt;c&amp;gt; pycharm&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;pycharm里面创建工程貌似是会建立一个虚拟的python环境，那个工程自子创建的虚拟环境的python和主环境下的python不一样，自创的python不具有主环境下安装的包，因此，需要在pycharm中修改一下配置。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;进入Pycharm，File-&amp;gt;Settings-&amp;gt;Project /name/ -&amp;gt;Project Interpreter，然后点击右边的界面里 Project Interpreter后面的“设置”的符号，选择“Add”，进入“Add Python Interpreter”界面，选中“Exist environment”，选择主环境下python安装路径里的“python.exe”即可。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;vsopencvcontrib&quot;&gt;VS+opencv+contrib&lt;/h1&gt;
+</description>
+        <pubDate>Fri, 11 Oct 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/10/11/Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/10/11/Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95.html</guid>
+        
+        <category>Windows</category>
         
         
         <category>安装记录</category>
@@ -269,6 +382,80 @@ sudo python3 -m pip install opencv-contrib-python
         
         
         <category>安装记录</category>
+        
+      </item>
+    
+      <item>
+        <title>pip&amp;conda 换源</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#pip--conda-换源&quot; id=&quot;markdown-toc-pip--conda-换源&quot;&gt;pip / conda 换源&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#pip换源&quot; id=&quot;markdown-toc-pip换源&quot;&gt;pip换源&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#conda换源&quot; id=&quot;markdown-toc-conda换源&quot;&gt;conda换源&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;pip--conda-换源&quot;&gt;pip / conda 换源&lt;/h1&gt;
+
+&lt;h2 id=&quot;pip换源&quot;&gt;pip换源&lt;/h2&gt;
+&lt;p&gt;临时从清华源下载安装使用如下命令&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install Package_NMAE -i https://pypi.tuna.tsinghua.edu.cn/simple
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;永久性换源&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;升级 pip 到最新的版本 (&amp;gt;=10.0.0) 后进行配置：
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install pip -U
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;如果您到 pip 默认源的网络连接较差，临时使用本镜像站来升级 pip：
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;(参考链接　https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;另一种方法&lt;/p&gt;
+
+&lt;p&gt;修改 ~/.pip/pip.conf (没有就创建一个)， 内容如下：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conda换源&quot;&gt;conda换源&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/menpo/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+conda config --set show_channel_urls yes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;也可以直接编辑&lt;code class=&quot;highlighter-rouge&quot;&gt;~/.condarc&lt;/code&gt;,把下面的内容复制上去&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/menpo/ 
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - defaults
+show_channel_urls: true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 10 Oct 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/10/10/pip&conda-%E6%8D%A2%E6%BA%90.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/10/10/pip&conda-%E6%8D%A2%E6%BA%90.html</guid>
+        
+        <category>Ubuntu</category>
+        
+        
+        <category>奇技淫巧</category>
         
       </item>
     
@@ -847,116 +1034,6 @@ https://www.runoob.com/linux/linux-vim.html
         <pubDate>Fri, 09 Aug 2019 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2019/08/09/%E6%97%A0%E8%A8%80.html</link>
         <guid isPermaLink="true">http://localhost:4000/2019/08/09/%E6%97%A0%E8%A8%80.html</guid>
-        
-        <category>诗词画意</category>
-        
-        
-        <category>其他</category>
-        
-      </item>
-    
-      <item>
-        <title>江城子 夏行</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#诗词&quot; id=&quot;markdown-toc-诗词&quot;&gt;诗词&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#背景介绍&quot; id=&quot;markdown-toc-背景介绍&quot;&gt;背景介绍&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#解释心路历程&quot; id=&quot;markdown-toc-解释心路历程&quot;&gt;解释/心路历程&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;诗词&quot;&gt;诗词&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;                  &lt;strong&gt;江城子 夏行&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;                          
-现 张子虚&lt;/p&gt;
-
-&lt;p&gt;  相逢于信，求学紫金，儒亿闲卧听蝉鸣，忆往昔，迷途大梦方醒。正是临安柳色青，西湖良景，叹，无心，无行。&lt;/p&gt;
-
-&lt;p&gt;  书山不平，一点寒星，本欲独自把烛秉，现而今，前路有君伴行。待到江城车马停，客舍对影，听，有琴，有情。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;背景介绍&quot;&gt;背景介绍&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;  这首词作于己亥年七月初四寅时，七月初三，我和同届的浩文、小赵、岩哥、皓哥约在光谷玩了一下午，期间吃了顿饭，聊了很多东西，出来玩了一次，几个人之间的感情也更深了一点，又想起前不久，四人一起去杭州听课，友谊就在那时开始扎根，发芽，夜半，睡不着，遂提笔，著此篇。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;解释心路历程&quot;&gt;解释/心路历程&lt;/h2&gt;
-&lt;hr /&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;临安：杭州旧称&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;江城：武汉旧称&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;  一行人在电信学院相逢，又是这一行人（缺浩文）去杭州大学紫金港校区去参加暑期课程，去杭州定的酒店是唐人儒亿酒店，那时的杭州，树上的知鸟真的吵。参加的课听不懂，感觉自己知识少，真的是荒废了四年的好时光。杭州景色正浓，却都没有心思去西湖看一看。
-（Actually，是因为沉迷于打牌无法自拔，才没去西湖，哈哈哈）&lt;/p&gt;
-
-&lt;p&gt;  昨日在武汉玩到很晚，吃饭的时候，就学习上的前景、方向聊了很多，想着这么多人陪着一起走下去，就觉得以后路上也并不孤单，友情，有情。&lt;/p&gt;
-</description>
-        <pubDate>Sun, 04 Aug 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/08/04/%E6%B1%9F%E5%9F%8E%E5%AD%90-%E5%A4%8F%E8%A1%8C.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/08/04/%E6%B1%9F%E5%9F%8E%E5%AD%90-%E5%A4%8F%E8%A1%8C.html</guid>
-        
-        <category>诗词画意</category>
-        
-        
-        <category>其他</category>
-        
-      </item>
-    
-      <item>
-        <title>雨霖铃 赠别可为</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#诗词&quot; id=&quot;markdown-toc-诗词&quot;&gt;诗词&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#背景介绍&quot; id=&quot;markdown-toc-背景介绍&quot;&gt;背景介绍&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#解释心路历程&quot; id=&quot;markdown-toc-解释心路历程&quot;&gt;解释/心路历程&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;诗词&quot;&gt;诗词&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;                  &lt;strong&gt;雨霖铃 赠别可为&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;                          
-现 张子虚&lt;/p&gt;
-
-&lt;p&gt;  小弟倦懒，行书山，幸得兄相伴。韶华虽短，不负所盼。六月离歌起，信步杨柳别岸，轻舟唱晚，听，曲终人散。&lt;/p&gt;
-
-&lt;p&gt;  此去别国，相见难，明月照两端。山高路远，请君万安。前方路漫漫，待君功成身还，推杯换盏，再，把酒言欢。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;背景介绍&quot;&gt;背景介绍&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;  这首词作于己亥年七月初二，晚，得知可为明日就要启程，心中感慨万分，想着这位本科里玩的最好的朋友就要远行，去往别国的土地，再见已不知是何年，遂赋词一首，赠别可为。&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 id=&quot;解释心路历程&quot;&gt;解释/心路历程&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;  我在学习的道路上比较慵懒，大学四年里，幸亏结识了夏总，跟在夏总身边，或多或少地在学习上变得紧张一些。四年很短，匆匆而逝，最终，夏总拿到了杜克的offer，我也成功的保研，留在武大继续读书，总归是没有辜负家人、朋友和自己的期盼。写这首词的时候，我想起了六月里和夏总一起去东湖绿道走了一圈，那天走了很久，聊了一路，突然感慨这样的时光以后也许都不会再有了，离歌已起，曲终，人就要散了。&lt;/p&gt;
-
-&lt;p&gt;  这次夏总去往异国他乡，几年之内，再难相见。远在异乡，还请你珍重，一切平安。求学的路还很长，等你学成归来之时，我们在相聚，好好地聊一聊，把酒言欢。&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 02 Aug 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/08/02/%E9%9B%A8%E9%9C%96%E9%93%83-%E8%B5%A0%E5%88%AB%E5%8F%AF%E4%B8%BA.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/08/02/%E9%9B%A8%E9%9C%96%E9%93%83-%E8%B5%A0%E5%88%AB%E5%8F%AF%E4%B8%BA.html</guid>
         
         <category>诗词画意</category>
         

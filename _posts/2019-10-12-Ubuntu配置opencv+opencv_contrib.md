@@ -45,17 +45,22 @@ cmake ..
 
 
 * cmake
+
 ```
 cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D CMAKE_BUILD_TYPE=Release -D OPENCV_EXTRA_MODULES_PATH=YOUR-PATH/opencv_contrib/modules -D OPENCV_ENABLE_NONFREE:BOOL=ON ..
 ```
 
 * make
+
 ```
 make -j8
 sudo make install 
 ```
+
 两篇由于提前安装anaconda3，结果make报错的解决方法（但是试过好像没有解决问题）
-https://blog.csdn.net/ZT0518/article/details/83445308
-https://blog.csdn.net/Zafir_410/article/details/74357544
+
+[Makefile:160: recipe for target 'all' failed(ubuntu16.04+opencv3.4+gcc5.4.0)](https://blog.csdn.net/ZT0518/article/details/83445308)
+
+[Makefile:160: recipe for target 'all' failed（Ubuntu 16.06 + Opencv3.2）解决办法](https://blog.csdn.net/Zafir_410/article/details/74357544)
 
 

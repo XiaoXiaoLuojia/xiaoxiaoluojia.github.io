@@ -1,7 +1,7 @@
 # Site settings 配置站点
-title: '子虚乌有的博客小屋'
-description: '很高兴能在这里见到你，我叫张瑞祥，给自己起了个假笔名叫子虚乌有，90后，多愁善感，不会舞文弄墨确偏要写诗赋词的理工男~'
-keyword: '张瑞祥, 迁客骚人、酸诗骚词、子虚乌有'
+title: 'Ruixiang Zhang (张瑞祥)'
+description: ''
+keyword: '张瑞祥, Ph.D of Wuhan University'
 url: 'https://zhangruixiang-whu.github.io/' # your host
 
 # when build blog on server, if you don't need baseurl, you should leave this value blank.
@@ -26,7 +26,7 @@ footer:
 # Author 配置博主信息
 author: '张瑞祥'
 nickname: '子虚乌有'
-bio: 'PhD of Wuhan University，热爱文学'
+bio: 'PhD of Wuhan University'
 avatar: '/assets/img/zrxself.jpg'
 
 # Search

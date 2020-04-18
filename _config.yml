@@ -2,7 +2,7 @@
 title: 'Ruixiang Zhang (张瑞祥)'
 description: ''
 keyword: '张瑞祥, Ph.D of Wuhan University'
-url: 'https://zhangruixiang-whu.github.io/' # your host
+url: 'https://xiaoxiaoluojia.github.io/' # your host
 
 # when build blog on server, if you don't need baseurl, you should leave this value blank.
 # 在服务器上建站时，如果你不需要子域名，请将这一格留空
@@ -60,7 +60,7 @@ sns:
   zhihu: '//www.zhihu.com/people/auspicious-70/activities'
 #  # juejin: '//juejin.im/user/57a6f434165abd006159b4cc'
 #  instagram: '//www.instagram.com/xkw168'
-  github: '//github.com/zhangruixiang-whu'
+  github: '//github.com/xiaoxiaoluojia'
 
 
 
